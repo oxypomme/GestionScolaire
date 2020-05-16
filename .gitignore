@@ -7,3 +7,6 @@ lib/
 
 # Backup files
 *.bak
+
+# Really windows ?
+desktop.ini
