@@ -1,0 +1,9 @@
+# VS Code files
+.vscode/
+
+# Compiled files
+lib/
+*.exe
+
+# Backup files
+*.bak
