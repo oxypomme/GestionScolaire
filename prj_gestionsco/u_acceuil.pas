@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  StdCtrls;
+  StdCtrls, ExtCtrls;
 
 type
 
@@ -23,8 +23,11 @@ type
     item_inscrit_liste: TMenuItem;
     item_archive_n2: TMenuItem;
     item_liste: TMenuItem;
+    lbl_info: TLabel;
     lbl_ariane: TLabel;
     mnu_main: TMainMenu;
+    pnl_center: TPanel;
+    pnl_left: TPanel;
     procedure item_accueilClick(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
   private
@@ -45,6 +48,7 @@ implementation
 procedure Tf_accueil.item_accueilClick(Sender: TObject);
 begin
      lbl_ariane.Caption := '> Accueil';
+
 end;
 
 procedure Tf_accueil.item_quitterClick(Sender: TObject);
