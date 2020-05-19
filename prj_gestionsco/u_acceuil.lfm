@@ -1739,6 +1739,7 @@ object f_accueil: Tf_accueil
     000000000000000000000000000000000000
   }
   Menu = mnu_main
+  OnShow = FormShow
   LCLVersion = '1.6.0.4'
   object pnl_left: TPanel
     Left = 0
