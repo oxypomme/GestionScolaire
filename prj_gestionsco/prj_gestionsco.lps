@@ -4,17 +4,90 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="1">
+    <Units Count="3">
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="8" Y="10"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="21"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="u_acceuil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_accueil"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="14"/>
+        <CursorPos X="19" Y="42"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="14" HistoryIndex="13">
+      <Position1>
+        <Filename Value="u_acceuil.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="31" Column="19" TopLine="5"/>
+      </Position2>
+      <Position3>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="32" Column="19" TopLine="5"/>
+      </Position3>
+      <Position4>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="33" Column="19" TopLine="5"/>
+      </Position4>
+      <Position5>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="34" Column="19" TopLine="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="35" Column="19" TopLine="7"/>
+      </Position6>
+      <Position7>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="36" Column="19" TopLine="8"/>
+      </Position7>
+      <Position8>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="37" Column="19" TopLine="9"/>
+      </Position8>
+      <Position9>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="38" Column="19" TopLine="10"/>
+      </Position9>
+      <Position10>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="39" Column="19" TopLine="11"/>
+      </Position10>
+      <Position11>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="40" Column="19" TopLine="12"/>
+      </Position11>
+      <Position12>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="42" Column="19" TopLine="14"/>
+      </Position12>
+      <Position13>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="41" Column="19" TopLine="14"/>
+      </Position13>
+      <Position14>
+        <Filename Value="prj_gestionsco.lpr"/>
+      </Position14>
+    </JumpHistory>
   </ProjectSession>
 </CONFIG>
