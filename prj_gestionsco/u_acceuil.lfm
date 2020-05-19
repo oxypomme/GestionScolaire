@@ -1763,6 +1763,7 @@ object f_accueil: Tf_accueil
   object mnu_main: TMainMenu
     object item_accueil: TMenuItem
       Caption = 'Accueil'
+      OnClick = item_accueilClick
     end
     object item_inscrit: TMenuItem
       Caption = 'Inscrit'
@@ -1790,6 +1791,7 @@ object f_accueil: Tf_accueil
     end
     object item_quitter: TMenuItem
       Caption = 'Quitter'
+      OnClick = item_quitterClick
     end
   end
 end

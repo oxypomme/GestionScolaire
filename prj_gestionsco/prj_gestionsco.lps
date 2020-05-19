@@ -8,9 +8,8 @@
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="8" Y="10"/>
+        <CursorPos X="26" Y="17"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -26,14 +25,15 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="f_accueil"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="14"/>
-        <CursorPos X="19" Y="42"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="11" Y="52"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
     </Units>
-    <JumpHistory Count="14" HistoryIndex="13">
+    <JumpHistory Count="17" HistoryIndex="16">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
       </Position1>
@@ -88,6 +88,18 @@
       <Position14>
         <Filename Value="prj_gestionsco.lpr"/>
       </Position14>
+      <Position15>
+        <Filename Value="prj_gestionsco.lpr"/>
+        <Caret Line="10" Column="8"/>
+      </Position15>
+      <Position16>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="43" Column="19" TopLine="15"/>
+      </Position16>
+      <Position17>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="47" Column="3" TopLine="22"/>
+      </Position17>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
