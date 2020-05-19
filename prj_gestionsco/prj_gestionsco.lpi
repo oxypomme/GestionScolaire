@@ -48,6 +48,7 @@
         <Filename Value="u_select_inscrit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="f_select_inscrit"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit2>
     </Units>

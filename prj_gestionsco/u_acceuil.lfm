@@ -4,6 +4,13 @@ object f_accueil: Tf_accueil
   Top = 147
   Width = 1280
   Caption = 'Gestion de la scolarité'
+  ClientHeight = 700
+  ClientWidth = 1280
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Trebuchet MS'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
   Icon.Data = {
     8ED70000000001000100868200000100180078D7000016000000280000008600
     000004010000010018000000000028CD00006400000064000000000000000000
@@ -1733,9 +1740,30 @@ object f_accueil: Tf_accueil
   }
   Menu = mnu_main
   LCLVersion = '1.6.0.4'
+  object lbl_ariane: TLabel
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 1280
+    Align = alTop
+    AutoSize = False
+    Caption = '> Accueil'
+    Color = clGray
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Trebuchet MS'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
   object mnu_main: TMainMenu
     object item_accueil: TMenuItem
       Caption = 'Accueil'
+      OnClick = item_accueilClick
     end
     object item_inscrit: TMenuItem
       Caption = 'Inscrit'
@@ -1763,6 +1791,7 @@ object f_accueil: Tf_accueil
     end
     object item_quitter: TMenuItem
       Caption = 'Quitter'
+      OnClick = item_quitterClick
     end
   end
 end
