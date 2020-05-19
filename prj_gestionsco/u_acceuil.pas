@@ -76,6 +76,8 @@ begin
      f_select_inscrit.align := alClient;
      //f_select_inscrit.init;
      f_select_inscrit.show;
+
+     lbl_ariane.Caption := '> Inscrit > Liste';
 end;
 
 procedure Tf_accueil.item_quitterClick(Sender: TObject);
