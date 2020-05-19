@@ -8,8 +8,9 @@
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="26" Y="17"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="49" Y="18"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -19,11 +20,11 @@
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="17" Y="2"/>
+        <TopLine Value="35"/>
+        <CursorPos X="8" Y="77"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="u_select_inscrit.pas"/>
@@ -31,11 +32,23 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="30" Y="26"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="20" Y="15"/>
         <UsageCount Value="22"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
+        <Filename Value="u_liste.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_liste"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="28" Y="44"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
         <Filename Value="u_liste.lfm"/>
         <ComponentName Value="f_liste"/>
         <HasResources Value="True"/>
@@ -44,17 +57,6 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="u_liste.pas"/>
-        <ComponentName Value="f_liste"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="15" Y="15"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="u_acceuil.lfm"/>
@@ -64,19 +66,32 @@
       </Unit5>
       <Unit6>
         <Filename Value="u_loaddataset.pas"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="58" Y="14"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit6>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="5" HistoryIndex="4">
       <Position1>
-        <Filename Value="u_loaddataset.pas"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="31" Column="85"/>
       </Position1>
       <Position2>
-        <Filename Value="u_loaddataset.pas"/>
-        <Caret Line="8" Column="26"/>
+        <Filename Value="prj_gestionsco.lpr"/>
+        <Caret Line="18" Column="30"/>
       </Position2>
+      <Position3>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="74" Column="37" TopLine="31"/>
+      </Position3>
+      <Position4>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="44" Column="39" TopLine="35"/>
+      </Position4>
+      <Position5>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="43" Column="25" TopLine="3"/>
+      </Position5>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

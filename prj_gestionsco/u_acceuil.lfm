@@ -1801,6 +1801,7 @@ object f_accueil: Tf_accueil
       Caption = 'Inscrit'
       object item_inscrit_liste: TMenuItem
         Caption = 'Liste'
+        OnClick = item_inscrit_listeClick
       end
       object item_archive: TMenuItem
         Caption = 'Archive'

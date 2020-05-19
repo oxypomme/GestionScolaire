@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  StdCtrls, ExtCtrls;
+  StdCtrls, ExtCtrls,
+  u_select_inscrit;
 
 type
 
@@ -30,6 +31,7 @@ type
     pnl_left: TPanel;
     procedure FormShow(Sender: TObject);
     procedure item_accueilClick(Sender: TObject);
+    procedure item_inscrit_listeClick(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
   private
     { private declarations }
@@ -65,6 +67,15 @@ procedure Tf_accueil.item_accueilClick(Sender: TObject);
 begin
      lbl_ariane.Caption := '> Accueil';
 
+end;
+
+procedure Tf_accueil.item_inscrit_listeClick(Sender: TObject);
+begin
+     f_select_inscrit.borderstyle := bsNone;
+     f_select_inscrit.parent := pnl_left;
+     f_select_inscrit.align := alClient;
+     //f_select_inscrit.init;
+     f_select_inscrit.show;
 end;
 
 procedure Tf_accueil.item_quitterClick(Sender: TObject);
