@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -44,6 +44,12 @@
         <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="u_select_inscrit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_select_inscrit"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

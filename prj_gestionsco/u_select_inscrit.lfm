@@ -1,0 +1,9 @@
+object f_select_inscrit: Tf_select_inscrit
+  Left = 1416
+  Height = 720
+  Top = 178
+  Width = 280
+  Caption = 'f_select_inscrit'
+  ParentFont = True
+  LCLVersion = '1.6.0.4'
+end
