@@ -8,7 +8,6 @@
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="8" Y="10"/>
         <UsageCount Value="21"/>
@@ -27,9 +26,12 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="30" Y="26"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="37" Y="22"/>
         <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="u_acceuil.lfm"/>
@@ -47,7 +49,7 @@
         <LoadedDesigner Value="True"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="39" Column="19" TopLine="11"/>
@@ -115,6 +117,46 @@
       <Position17>
         <Filename Value="prj_gestionsco.lpr"/>
       </Position17>
+      <Position18>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="26" Column="30"/>
+      </Position18>
+      <Position19>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="27" Column="30"/>
+      </Position19>
+      <Position20>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="26" Column="30"/>
+      </Position20>
+      <Position21>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="27" Column="30"/>
+      </Position21>
+      <Position22>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="28" Column="30"/>
+      </Position22>
+      <Position23>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="29" Column="30"/>
+      </Position23>
+      <Position24>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="30" Column="30"/>
+      </Position24>
+      <Position25>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="31" Column="30"/>
+      </Position25>
+      <Position26>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="32" Column="30"/>
+      </Position26>
+      <Position27>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="33" Column="30"/>
+      </Position27>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
