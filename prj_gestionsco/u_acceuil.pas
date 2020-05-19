@@ -5,8 +5,7 @@ unit u_acceuil;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus;
 
 type
 
@@ -23,10 +22,7 @@ type
     item_inscrit_liste: TMenuItem;
     item_archive_n2: TMenuItem;
     item_liste: TMenuItem;
-    lbl_ariane: TLabel;
     mnu_main: TMainMenu;
-    procedure item_accueilClick(Sender: TObject);
-    procedure item_quitterClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -41,16 +37,6 @@ implementation
 {$R *.lfm}
 
 { Tf_accueil }
-
-procedure Tf_accueil.item_accueilClick(Sender: TObject);
-begin
-     lbl_ariane.Caption := '> Accueil';
-end;
-
-procedure Tf_accueil.item_quitterClick(Sender: TObject);
-begin
-     Close;
-end;
 
 end.
 
