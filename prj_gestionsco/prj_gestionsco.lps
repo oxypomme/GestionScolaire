@@ -8,11 +8,11 @@
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="8" Y="10"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -27,12 +27,9 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="30" Y="26"/>
         <UsageCount Value="22"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="u_acceuil.lfm"/>
@@ -42,118 +39,82 @@
       </Unit3>
       <Unit4>
         <Filename Value="u_acceuil.pas"/>
+        <ComponentName Value="f_accueil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="17" HistoryIndex="16">
       <Position1>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="13" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="39" Column="19" TopLine="11"/>
       </Position1>
       <Position2>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="17" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="40" Column="19" TopLine="12"/>
       </Position2>
       <Position3>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="18" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="42" Column="19" TopLine="14"/>
       </Position3>
       <Position4>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="19" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="41" Column="19" TopLine="14"/>
       </Position4>
       <Position5>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="20" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="43" Column="19" TopLine="15"/>
       </Position5>
       <Position6>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="21" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="47" Column="3" TopLine="22"/>
       </Position6>
       <Position7>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="22" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="52" Column="11" TopLine="4"/>
       </Position7>
       <Position8>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="23" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="53" Column="11" TopLine="4"/>
       </Position8>
       <Position9>
-        <Filename Value="u_select_inscrit.pas"/>
-        <Caret Line="24" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="50" Column="6" TopLine="6"/>
       </Position9>
       <Position10>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="39" Column="19" TopLine="11"/>
+        <Caret Line="52" Column="6" TopLine="7"/>
       </Position10>
       <Position11>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="40" Column="19" TopLine="12"/>
+        <Caret Line="55" Column="41" TopLine="19"/>
       </Position11>
       <Position12>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="42" Column="19" TopLine="14"/>
+        <Caret Line="59" Column="30" TopLine="19"/>
       </Position12>
       <Position13>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="41" Column="19" TopLine="14"/>
+        <Caret Line="58" Column="30" TopLine="19"/>
       </Position13>
       <Position14>
-        <Filename Value="prj_gestionsco.lpr"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="37" Column="68" TopLine="20"/>
       </Position14>
       <Position15>
-        <Filename Value="prj_gestionsco.lpr"/>
-        <Caret Line="10" Column="8"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="60" Column="26" TopLine="19"/>
       </Position15>
       <Position16>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="43" Column="19" TopLine="15"/>
+        <Caret Line="59" Column="26" TopLine="19"/>
       </Position16>
       <Position17>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="47" Column="3" TopLine="22"/>
+        <Filename Value="prj_gestionsco.lpr"/>
       </Position17>
-      <Position18>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="52" Column="11" TopLine="4"/>
-      </Position18>
-      <Position19>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="53" Column="11" TopLine="4"/>
-      </Position19>
-      <Position20>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="50" Column="6" TopLine="6"/>
-      </Position20>
-      <Position21>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="52" Column="6" TopLine="7"/>
-      </Position21>
-      <Position22>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="55" Column="41" TopLine="19"/>
-      </Position22>
-      <Position23>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="59" Column="30" TopLine="19"/>
-      </Position23>
-      <Position24>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="58" Column="30" TopLine="19"/>
-      </Position24>
-      <Position25>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="37" Column="68" TopLine="20"/>
-      </Position25>
-      <Position26>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="60" Column="26" TopLine="19"/>
-      </Position26>
-      <Position27>
-        <Filename Value="u_acceuil.pas"/>
-        <Caret Line="59" Column="26" TopLine="19"/>
-      </Position27>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
