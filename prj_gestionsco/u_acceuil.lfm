@@ -1739,7 +1739,18 @@ object f_accueil: Tf_accueil
     000000000000000000000000000000000000
   }
   Menu = mnu_main
+  OnShow = FormShow
   LCLVersion = '1.6.0.4'
+  object pnl_left: TPanel
+    Left = 0
+    Height = 650
+    Top = 32
+    Width = 240
+    Align = alLeft
+    Color = clSilver
+    ParentColor = False
+    TabOrder = 0
+  end
   object lbl_ariane: TLabel
     Left = 0
     Height = 32
@@ -1758,6 +1769,27 @@ object f_accueil: Tf_accueil
     Layout = tlCenter
     ParentColor = False
     ParentFont = False
+    Transparent = False
+  end
+  object pnl_center: TPanel
+    Left = 240
+    Height = 650
+    Top = 32
+    Width = 1040
+    Align = alClient
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 1
+  end
+  object lbl_info: TLabel
+    Left = 0
+    Height = 18
+    Top = 682
+    Width = 1280
+    Align = alBottom
+    Caption = 'Message d''information'
+    Color = clSilver
+    ParentColor = False
     Transparent = False
   end
   object mnu_main: TMainMenu
