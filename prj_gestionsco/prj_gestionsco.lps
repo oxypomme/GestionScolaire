@@ -4,14 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="49" Y="18"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="23"/>
       </Unit0>
       <Unit1>
         <Filename Value="u_acceuil.pas"/>
@@ -19,10 +18,9 @@
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="43"/>
-        <CursorPos X="8" Y="83"/>
-        <UsageCount Value="21"/>
+        <CursorPos X="17" Y="83"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -32,10 +30,9 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="20" Y="15"/>
-        <UsageCount Value="23"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="24"/>
       </Unit2>
       <Unit3>
         <Filename Value="u_liste.pas"/>
@@ -43,11 +40,10 @@
         <ComponentName Value="f_liste"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="25"/>
-        <CursorPos X="10" Y="61"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="38" Y="30"/>
+        <UsageCount Value="22"/>
       </Unit3>
       <Unit4>
         <Filename Value="u_liste.lfm"/>
@@ -71,32 +67,101 @@
         <CursorPos X="58" Y="14"/>
         <UsageCount Value="10"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_liste_inscrits"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="36" Y="33"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="31" Column="85"/>
       </Position1>
       <Position2>
-        <Filename Value="prj_gestionsco.lpr"/>
-        <Caret Line="18" Column="30"/>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="74" Column="37" TopLine="31"/>
       </Position2>
       <Position3>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="74" Column="37" TopLine="31"/>
+        <Caret Line="44" Column="39" TopLine="35"/>
       </Position3>
       <Position4>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="44" Column="39" TopLine="35"/>
+        <Caret Line="43" Column="25" TopLine="3"/>
       </Position4>
       <Position5>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="43" Column="25" TopLine="3"/>
+        <Caret Line="81" Column="34" TopLine="37"/>
       </Position5>
       <Position6>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="81" Column="34" TopLine="37"/>
+        <Caret Line="10" Column="37"/>
       </Position6>
+      <Position7>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="84" Column="13" TopLine="43"/>
+      </Position7>
+      <Position8>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="82" Column="33" TopLine="44"/>
+      </Position8>
+      <Position9>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="27" Column="16"/>
+      </Position9>
+      <Position10>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="32" Column="16"/>
+      </Position10>
+      <Position11>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="31" Column="16"/>
+      </Position11>
+      <Position12>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="32" Column="16"/>
+      </Position12>
+      <Position13>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="31" Column="16"/>
+      </Position13>
+      <Position14>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="30" Column="19"/>
+      </Position14>
+      <Position15>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="70" Column="35" TopLine="43"/>
+      </Position15>
+      <Position16>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="30" Column="28"/>
+      </Position16>
+      <Position17>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="31" Column="28"/>
+      </Position17>
+      <Position18>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="30" Column="28"/>
+      </Position18>
+      <Position19>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="31" Column="28"/>
+      </Position19>
+      <Position20>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <Caret Line="32" Column="28"/>
+      </Position20>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

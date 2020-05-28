@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
   StdCtrls, ExtCtrls,
-  u_select_inscrit, u_liste;
+  u_select_inscrit, u_liste_inscrits;
 
 type
 
@@ -77,11 +77,11 @@ begin
      //f_select_inscrit.init;
      f_select_inscrit.show;
 
-     f_liste.borderstyle := bsNone;
-     f_liste.parent := pnl_center;
-     f_liste.align := alClient;
-     //f_liste.init;
-     f_liste.show;
+     f_liste_inscrits.borderstyle := bsNone;
+     f_liste_inscrits.parent := pnl_center;
+     f_liste_inscrits.align := alClient;
+     f_liste_inscrits.init;
+     f_liste_inscrits.show ;
 
      lbl_ariane.Caption := '> Inscrit > Liste';
 end;
