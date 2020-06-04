@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
   StdCtrls, ExtCtrls,
-  u_select_inscrit, u_liste, u_feuille_style;
+  u_select_inscrit, u_liste_inscrits, u_liste, u_feuille_style;
 
 type
 
@@ -71,7 +71,7 @@ begin
    pnl_ariane.Caption := '';
    item := TMenuItem(Sender);
    repeat
-         pnl_ariane.Caption := ' >' + item.caption +pnl_ariane.Caption;
+         pnl_ariane.Caption := ' >' + item.caption + pnl_ariane.Caption;
          item := item.parent;
    until item.parent = nil;
 end;

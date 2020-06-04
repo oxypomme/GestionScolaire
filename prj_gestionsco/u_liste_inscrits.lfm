@@ -1,7 +1,7 @@
 inherited f_liste_inscrits: Tf_liste_inscrits
-  Left = 450
+  Left = 233
   Height = 585
-  Top = 218
+  Top = 205
   Width = 1071
   Caption = 'f_liste_inscrits'
   ClientHeight = 585
@@ -66,6 +66,39 @@ inherited f_liste_inscrits: Tf_liste_inscrits
     inherited sg_liste: TStringGrid
       Height = 517
       Width = 1071
+      ColCount = 5
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'n°'
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = ''
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Alignment = taCenter
+          Title.Caption = 'Identité'
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Commune domicile'
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Filière'
+        end>
+      ColWidths = (
+        64
+        64
+        64
+        64
+        64
+      )
+      Cells = (
+        0
+      )
     end
   end
 end
