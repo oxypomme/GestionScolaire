@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
         <CursorPos X="49" Y="18"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,8 +19,9 @@
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <CursorPos X="63" Y="28"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="41"/>
+        <CursorPos X="32" Y="58"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -30,10 +31,10 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="63"/>
-        <CursorPos Y="62"/>
-        <UsageCount Value="24"/>
+        <CursorPos X="52" Y="36"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -45,10 +46,19 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="2"/>
         <CursorPos X="10" Y="61"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
+        <Filename Value="u_liste_inscrits.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_liste_inscrits"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="21"/>
+      </Unit4>
+      <Unit5>
         <Filename Value="u_liste.lfm"/>
         <ComponentName Value="f_liste"/>
         <HasResources Value="True"/>
@@ -57,24 +67,23 @@
         <WindowIndex Value="-1"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit4>
-      <Unit5>
+      </Unit5>
+      <Unit6>
         <Filename Value="u_acceuil.lfm"/>
         <EditorIndex Value="-1"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit5>
-      <Unit6>
+      </Unit6>
+      <Unit7>
         <Filename Value="u_loaddataset.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="378"/>
-        <CursorPos Y="401"/>
+        <CursorPos X="38" Y="393"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
-      </Unit6>
+      </Unit7>
     </Units>
-    <JumpHistory Count="14" HistoryIndex="13">
+    <JumpHistory Count="15" HistoryIndex="14">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="31" Column="85"/>
@@ -131,6 +140,10 @@
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="28" Column="63"/>
       </Position14>
+      <Position15>
+        <Filename Value="u_loaddataset.pas"/>
+        <Caret Line="393" Column="38" TopLine="378"/>
+      </Position15>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
