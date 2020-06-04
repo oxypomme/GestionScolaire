@@ -1,7 +1,7 @@
 object f_accueil: Tf_accueil
-  Left = 238
+  Left = 425
   Height = 720
-  Top = 147
+  Top = 166
   Width = 1280
   Caption = 'Gestion de la scolarité'
   ClientHeight = 700

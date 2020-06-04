@@ -8,7 +8,7 @@
       <Unit0>
         <Filename Value="prj_gestionsco.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="49" Y="18"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
@@ -19,8 +19,7 @@
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="45" Y="10"/>
+        <CursorPos X="63" Y="28"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,7 +30,7 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="63"/>
         <CursorPos Y="62"/>
         <UsageCount Value="24"/>
@@ -44,7 +43,7 @@
         <ComponentName Value="f_liste"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="10" Y="61"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
@@ -67,12 +66,15 @@
       </Unit5>
       <Unit6>
         <Filename Value="u_loaddataset.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="58" Y="14"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="378"/>
+        <CursorPos Y="401"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit6>
     </Units>
-    <JumpHistory Count="13" HistoryIndex="12">
+    <JumpHistory Count="14" HistoryIndex="13">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="31" Column="85"/>
@@ -125,6 +127,10 @@
         <Filename Value="u_select_inscrit.pas"/>
         <Caret Line="103" Column="34" TopLine="63"/>
       </Position13>
+      <Position14>
+        <Filename Value="u_acceuil.pas"/>
+        <Caret Line="28" Column="63"/>
+      </Position14>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
