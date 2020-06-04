@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
   StdCtrls, ExtCtrls,
-  u_select_inscrit, u_liste;
+  u_select_inscrit, u_liste, u_feuille_style;
 
 type
 

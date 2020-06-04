@@ -44,6 +44,7 @@ object f_select_inscrit: Tf_select_inscrit
         Align = alTop
         Caption = 'Tous'
         TabOrder = 0
+        OnClick = pnl_choix_btnClick
       end
       object pnl_tous_edit: TPanel
         Left = 1
@@ -72,6 +73,7 @@ object f_select_inscrit: Tf_select_inscrit
         Align = alTop
         Caption = 'Etudiant'
         TabOrder = 0
+        OnClick = pnl_choix_btnClick
       end
       object pnl_etudiant_edit: TPanel
         Left = 1
@@ -103,7 +105,7 @@ object f_select_inscrit: Tf_select_inscrit
           TabOrder = 1
         end
         object lbl_num: TLabel
-          Left = 19
+          Left = 8
           Height = 15
           Top = 13
           Width = 45
@@ -112,7 +114,7 @@ object f_select_inscrit: Tf_select_inscrit
           ParentColor = False
         end
         object lbl_nom: TLabel
-          Left = 37
+          Left = 24
           Height = 15
           Top = 45
           Width = 27
@@ -140,6 +142,7 @@ object f_select_inscrit: Tf_select_inscrit
         Align = alTop
         Caption = 'Filière'
         TabOrder = 0
+        OnClick = pnl_choix_btnClick
       end
       object pnl_filiere_edit: TPanel
         Left = 1
@@ -162,7 +165,7 @@ object f_select_inscrit: Tf_select_inscrit
           TabOrder = 0
         end
         object lbl_code: TLabel
-          Left = 36
+          Left = 19
           Height = 15
           Top = 19
           Width = 28
@@ -170,6 +173,26 @@ object f_select_inscrit: Tf_select_inscrit
           Caption = 'Code'
           ParentColor = False
         end
+      end
+    end
+    object pnl_rechercher: TPanel
+      Left = 1
+      Height = 50
+      Top = 247
+      Width = 238
+      Align = alTop
+      ClientHeight = 50
+      ClientWidth = 238
+      TabOrder = 3
+      object btn_rechercher: TButton
+        Left = 145
+        Height = 25
+        Top = 12
+        Width = 75
+        Caption = 'Rechercher'
+        Default = True
+        OnClick = btn_rechercherClick
+        TabOrder = 0
       end
     end
   end
