@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls;
+  StdCtrls, u_feuille_style;
 
 type
 
@@ -32,8 +32,8 @@ type
     pnl_tous: TPanel;
     pnl_choix: TPanel;
     pnl_titre: TPanel;
-    procedure btn_rechercherClick(Sender: TObject);
     procedure Init;
+    procedure btn_rechercherClick(Sender: TObject);
     procedure NonSelectionPanel (pnl : TPanel);
     procedure AucuneSelection;
     procedure pnl_choix_btnClick (Sender: TObject);
@@ -50,7 +50,6 @@ implementation
 
 {$R *.lfm}
 
-uses u_feuille_style;
 var
  pnl_actif : TPanel;
 
@@ -99,7 +98,8 @@ end;
 
 procedure Tf_select_inscrit.AucuneSelection;
 begin
- NonSelectionPanel (pnl_tous); NonSelectionPanel (pnl_etudiant);
+ NonSelectionPanel (pnl_tous);
+ NonSelectionPanel (pnl_etudiant);
  NonSelectionPanel (pnl_filiere);
 end;
 

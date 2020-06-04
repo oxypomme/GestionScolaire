@@ -11,6 +11,7 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="49" Y="18"/>
         <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="u_acceuil.pas"/>
@@ -18,9 +19,8 @@
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="38"/>
-        <CursorPos X="31" Y="76"/>
+        <TopLine Value="41"/>
+        <CursorPos X="32" Y="58"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,9 +31,12 @@
         <ComponentName Value="f_select_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="20" Y="15"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="52" Y="36"/>
         <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="u_liste.pas"/>
@@ -41,10 +44,10 @@
         <ComponentName Value="f_liste"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="38" Y="30"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="10" Y="61"/>
         <UsageCount Value="23"/>
+        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="u_liste_inscrits.pas"/>
@@ -52,11 +55,8 @@
         <ComponentName Value="f_liste_inscrits"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="36" Y="33"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="21"/>
       </Unit4>
       <Unit5>
         <Filename Value="u_liste.lfm"/>
@@ -76,12 +76,14 @@
       </Unit6>
       <Unit7>
         <Filename Value="u_loaddataset.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="58" Y="14"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="378"/>
+        <CursorPos X="38" Y="393"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit7>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="15" HistoryIndex="14">
       <Position1>
         <Filename Value="u_acceuil.pas"/>
         <Caret Line="31" Column="85"/>
@@ -140,7 +142,11 @@
       </Position14>
       <Position15>
         <Filename Value="u_acceuil.pas"/>
-        <Caret Line="70" Column="35" TopLine="43"/>
+        <Caret Line="28" Column="63"/>
+      </Position14>
+      <Position15>
+        <Filename Value="u_loaddataset.pas"/>
+        <Caret Line="393" Column="38" TopLine="378"/>
       </Position15>
       <Position16>
         <Filename Value="u_liste_inscrits.pas"/>
