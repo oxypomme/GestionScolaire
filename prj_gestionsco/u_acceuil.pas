@@ -29,6 +29,7 @@ type
     mnu_main: TMainMenu;
     pnl_center: TPanel;
     pnl_left: TPanel;
+    pnl_ariane: TPanel;
     procedure FormShow(Sender: TObject);
     procedure item_accueilClick(Sender: TObject);
     procedure item_inscrit_listeClick(Sender: TObject);
@@ -64,13 +65,15 @@ begin
 end;
 
 procedure Tf_accueil.item_accueilClick(Sender: TObject);
+var
+   item : TMenuItem;
 begin
    pnl_left.show;
 
    pnl_ariane.Caption := '';
    item := TMenuItem(Sender);
    repeat
-         pnl_ariane.Caption := ' >' + item.caption + pnl_ariane.Caption;
+         pnl_ariane.Caption := ' > ' + item.caption + pnl_ariane.Caption;
          item := item.parent;
    until item.parent = nil;
 end;
