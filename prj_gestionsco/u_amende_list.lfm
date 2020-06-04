@@ -1,0 +1,122 @@
+inherited f_amende_list: Tf_amende_list
+  Left = 863
+  Height = 270
+  Top = 312
+  Width = 392
+  Caption = 'f_amende_list'
+  ClientHeight = 270
+  ClientWidth = 392
+  inherited pnl_titre: TPanel
+    Height = 26
+    Width = 392
+    ClientHeight = 26
+    ClientWidth = 392
+    object lbl_amende_total: TLabel[0]
+      Left = 117
+      Height = 26
+      Top = 0
+      Width = 70
+      Align = alLeft
+      AutoSize = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_titre: TLabel[1]
+      Left = 0
+      Height = 26
+      Top = 0
+      Width = 117
+      Align = alLeft
+      Caption = 'Délits constatés : '
+      Layout = tlCenter
+      ParentColor = False
+    end
+  end
+  inherited pnl_btn: TPanel
+    Top = 236
+    Width = 392
+    ClientWidth = 392
+    inherited pnl_btn_page: TPanel
+      Width = 240
+      ClientWidth = 240
+      inherited btn_page_prior: TSpeedButton
+        Left = 121
+      end
+      inherited btn_page_next: TSpeedButton
+        Left = 160
+      end
+      inherited btn_page_last: TSpeedButton
+        Left = 200
+      end
+      inherited btn_page_first: TSpeedButton
+        Left = 82
+      end
+    end
+    inherited pnl_btn_ligne: TPanel
+      Left = 240
+      Width = 152
+      ClientWidth = 152
+      inherited btn_line_detail: TSpeedButton
+        Left = -10
+        Hint = 'détail du délit'
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 31
+        Hint = 'ajouter un délit'
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 110
+        Hint = 'supprimer le délit'
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 70
+        Hint = 'modifier le délit'
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 210
+    Top = 26
+    Width = 392
+    ClientHeight = 210
+    ClientWidth = 392
+    inherited sg_liste: TStringGrid
+      Height = 210
+      Width = 392
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'n°'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'nature'
+          Width = 260
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'tarif'
+          Width = 60
+        end>
+      ColWidths = (
+        50
+        260
+        60
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

@@ -1,0 +1,111 @@
+object f_gabarit: Tf_gabarit
+  Left = 220
+  Height = 800
+  Top = 107
+  Width = 1200
+  Caption = 'Gestion des Infractions'
+  ClientHeight = 780
+  ClientWidth = 1200
+  Color = 15461355
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -16
+  Font.Name = 'Calibri'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Menu = mnu_main
+  OnShow = FormShow
+  LCLVersion = '1.6.0.4'
+  object pnl_ariane: TPanel
+    Left = 0
+    Height = 30
+    Top = 0
+    Width = 1200
+    Align = alTop
+    Caption = 'fil d''ariane'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object pnl_selection: TPanel
+    Left = 0
+    Height = 720
+    Top = 30
+    Width = 280
+    Align = alClient
+    Caption = 'zone de sélection'
+    Color = 15461355
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+  end
+  object pnl_info: TPanel
+    Left = 0
+    Height = 30
+    Top = 750
+    Width = 1200
+    Align = alBottom
+    Caption = 'message d''information'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+  end
+  object pnl_travail: TPanel
+    Left = 280
+    Height = 720
+    Top = 30
+    Width = 920
+    Align = alRight
+    Caption = 'zone de travail'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+  end
+  object mnu_main: TMainMenu
+    left = 144
+    top = 64
+    object item_accueil: TMenuItem
+      Caption = 'Accueil'
+      OnClick = mnu_item_Click
+    end
+    object item_inscrit: TMenuItem
+      Caption = 'Infraction'
+      object item_liste: TMenuItem
+        Caption = 'Liste'
+        OnClick = mnu_item_Click
+      end
+      object item_stat: TMenuItem
+        Caption = 'Statistiques'
+        OnClick = mnu_item_Click
+      end
+    end
+    object item_tarif: TMenuItem
+      Caption = 'Tarification'
+      OnClick = mnu_item_Click
+    end
+    object item_quitter: TMenuItem
+      Caption = 'Quitter'
+      OnClick = item_quitterClick
+    end
+  end
+end

@@ -1,0 +1,131 @@
+inherited f_list_inscrit: Tf_list_inscrit
+  Left = 430
+  Height = 720
+  Top = 24
+  Width = 912
+  Caption = 'f_list_inscrit'
+  ClientHeight = 720
+  ClientWidth = 912
+  Color = clWhite
+  inherited pnl_titre: TPanel
+    Width = 912
+    Caption = 'Liste des inscrit'
+  end
+  inherited pnl_btn: TPanel
+    Top = 686
+    Width = 912
+    Caption = 'pnl_btn'
+    ClientWidth = 912
+    inherited pnl_btn_ligne: TPanel
+      Width = 513
+      ClientWidth = 513
+      inherited btn_line_detail: TSpeedButton
+        Left = 353
+        Hint = 'détail de l''inscrit'
+        Width = 40
+        OnClick = btn_line_detailClick
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 393
+        Hint = 'ajouter une inscrit'
+        Width = 40
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 473
+        Hint = 'supprimer l''inscrit'
+        Width = 40
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 433
+        Hint = 'modifier l''inscrit'
+        OnClick = btn_line_editClick
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 652
+    Width = 912
+    ClientHeight = 652
+    ClientWidth = 912
+    inherited sg_liste: TStringGrid
+      Height = 652
+      Width = 912
+      BorderStyle = bsNone
+      ColCount = 8
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = 'n°'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = 'le'
+          Width = 100
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = 'Véhicule'
+          Width = 100
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = ' '
+          Width = 130
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = 'Permis'
+          Width = 100
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = ' '
+          Width = 180
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = 'Lieu'
+          Width = 80
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Color = 15461355
+          Title.Caption = ' '
+          Width = 180
+        end>
+      GridLineWidth = 1
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goColSizing, goRowSelect]
+      RowCount = 5
+      ColWidths = (
+        50
+        100
+        100
+        130
+        100
+        180
+        80
+        180
+      )
+      RowHeights = (
+        22
+        22
+        22
+        22
+        22
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

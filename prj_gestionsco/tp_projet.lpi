@@ -6,7 +6,7 @@
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="prj_gestionsco"/>
+      <Title Value="tp_projet"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
@@ -28,23 +28,26 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="2">
+    <RequiredPackages Count="3">
       <Item1>
         <PackageName Value="zcomponent"/>
       </Item1>
       <Item2>
-        <PackageName Value="LCL"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="8">
       <Unit0>
-        <Filename Value="prj_gestionsco.lpr"/>
+        <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="u_acceuil.pas"/>
+        <Filename Value="u_gabarit.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="f_accueil"/>
+        <ComponentName Value="f_gabarit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
@@ -56,29 +59,48 @@
         <ResourceBaseClass Value="Form"/>
       </Unit2>
       <Unit3>
-        <Filename Value="u_liste.pas"/>
+        <Filename Value="u_list_inscrit.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="f_liste"/>
+        <ComponentName Value="f_list_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit3>
       <Unit4>
-        <Filename Value="u_liste_inscrits.pas"/>
+        <Filename Value="u_detail_inscrit.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="f_liste_inscrits"/>
+        <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="u_amende_list.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_amende_list"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="u_amende_ajout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_amende_ajout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="u_modele.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="prj_gestionsco"/>
+      <Filename Value="tp_projet"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="C:\IUT\M2105_IHM\Lazarus\tp2\appli_fin_TP2\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

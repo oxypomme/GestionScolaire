@@ -1,0 +1,523 @@
+object f_detail_inscrit: Tf_detail_inscrit
+  Left = 439
+  Height = 701
+  Top = 145
+  Width = 920
+  Caption = 'f_detail_infraction'
+  ClientHeight = 701
+  ClientWidth = 920
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -15
+  Font.Name = 'Calibri'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  LCLVersion = '1.6.0.4'
+  object pnl_titre: TPanel
+    Left = 0
+    Height = 34
+    Top = 0
+    Width = 920
+    Align = alTop
+    Caption = 'Détail d''une infraction'
+    TabOrder = 0
+  end
+  object pnl_btn: TPanel
+    Left = 0
+    Height = 40
+    Top = 661
+    Width = 920
+    Align = alBottom
+    ClientHeight = 40
+    ClientWidth = 920
+    TabOrder = 2
+    object btn_retour: TButton
+      Left = 744
+      Height = 25
+      Top = 8
+      Width = 83
+      Caption = 'Retour liste'
+      OnClick = btn_retourClick
+      TabOrder = 0
+    end
+    object btn_valider: TButton
+      Left = 648
+      Height = 25
+      Top = 8
+      Width = 83
+      Caption = 'Valider'
+      OnClick = btn_validerClick
+      TabOrder = 1
+    end
+    object btn_annuler: TButton
+      Left = 744
+      Height = 25
+      Top = 8
+      Width = 83
+      Caption = 'Annuler'
+      OnClick = btn_retourClick
+      TabOrder = 2
+    end
+  end
+  object pnl_detail: TPanel
+    Left = 0
+    Height = 627
+    Top = 34
+    Width = 920
+    Align = alClient
+    ClientHeight = 627
+    ClientWidth = 920
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    object pnl_conducteur: TPanel
+      Left = 1
+      Height = 116
+      Top = 186
+      Width = 918
+      Align = alTop
+      ClientHeight = 116
+      ClientWidth = 918
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 2
+      object lbl_permis: TLabel
+        Left = 47
+        Height = 18
+        Top = 24
+        Width = 59
+        Caption = 'n° permis'
+        ParentColor = False
+      end
+      object edt_permis: TEdit
+        Left = 116
+        Height = 22
+        Top = 21
+        Width = 80
+        AutoSize = False
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_permisExit
+        TabOrder = 0
+      end
+      object mmo_conducteur: TMemo
+        Left = 237
+        Height = 74
+        Top = 21
+        Width = 250
+        BorderStyle = bsNone
+        Lines.Strings = (
+          'AIRPACH Fabrice'
+          '24 rue des Tulipes'
+          '57000 Metz'
+          'permis obtenu le 24/03/1998'
+          ''
+        )
+        ReadOnly = True
+        TabOrder = 1
+        TabStop = False
+      end
+      object lbl_conducteur: TLabel
+        Left = -1
+        Height = 19
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = '  CONDUCTEUR'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbl_permis_erreur: TLabel
+        Left = 47
+        Height = 15
+        Top = 44
+        Width = 99
+        Caption = 'lbl_permis_erreur'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnl_vehicule: TPanel
+      Left = 1
+      Height = 116
+      Top = 70
+      Width = 918
+      Align = alTop
+      ClientHeight = 116
+      ClientWidth = 918
+      TabOrder = 1
+      object lbl_immat: TLabel
+        Left = 8
+        Height = 18
+        Top = 24
+        Width = 98
+        Caption = 'immatriculation'
+        ParentColor = False
+      end
+      object edt_immat: TEdit
+        Left = 116
+        Height = 22
+        Top = 21
+        Width = 96
+        AutoSize = False
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_immatExit
+        TabOrder = 0
+      end
+      object mmo_vehicule: TMemo
+        Left = 237
+        Height = 74
+        Top = 21
+        Width = 250
+        BorderStyle = bsNone
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Lines.Strings = (
+          'le 10/06/2010'
+          'PEUGEOT 308'
+          '7 CV'
+        )
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 1
+        TabStop = False
+      end
+      object mmo_proprio: TMemo
+        Left = 511
+        Height = 80
+        Top = 21
+        Width = 250
+        BorderStyle = bsNone
+        Lines.Strings = (
+          'AIRPACH Fabrice'
+          '24 rue des Tulipes'
+          '57000 Metz'
+          'permis obtenu le 24/03/1998'
+          ''
+        )
+        ReadOnly = True
+        TabOrder = 2
+        TabStop = False
+      end
+      object lbl_proprio: TLabel
+        Left = 511
+        Height = 18
+        Top = 0
+        Width = 72
+        Caption = 'propriétaire'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbl_vehicule: TLabel
+        Left = -1
+        Height = 19
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = '  VÉHICULE'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbl_immat_erreur: TLabel
+        Left = 47
+        Height = 15
+        Top = 45
+        Width = 96
+        Caption = 'lbl_immat_erreur'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnl_ident: TPanel
+      Left = 1
+      Height = 69
+      Top = 1
+      Width = 918
+      Align = alTop
+      ClientHeight = 69
+      ClientWidth = 918
+      TabOrder = 0
+      object edt_num: TEdit
+        Left = 116
+        Height = 22
+        Top = 17
+        Width = 80
+        AutoSize = False
+        CharCase = ecUppercase
+        OnExit = edt_numExit
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object lbl_num: TLabel
+        Left = 47
+        Height = 18
+        Top = 21
+        Width = 49
+        Caption = 'numéro'
+        ParentColor = False
+      end
+      object lbl_date: TLabel
+        Left = 237
+        Height = 18
+        Top = 20
+        Width = 28
+        Caption = 'date'
+        ParentColor = False
+      end
+      object lbl_ident: TLabel
+        Left = 0
+        Height = 19
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = '  IDENTIFICATION'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object edt_dt: TDateTimePicker
+        Left = 272
+        Height = 22
+        Top = 17
+        Width = 93
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        AutoSize = False
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        NullInputAllowed = False
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 41608
+        Time = 0.748114224537858
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+      object lbl_num_erreur: TLabel
+        Left = 47
+        Height = 15
+        Top = 40
+        Width = 85
+        Caption = 'lbl_num_erreur'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnl_commune: TPanel
+      Left = 1
+      Height = 80
+      Top = 302
+      Width = 918
+      Align = alTop
+      ClientHeight = 80
+      ClientWidth = 918
+      TabOrder = 3
+      object mmo_commune: TMemo
+        Left = 237
+        Height = 36
+        Top = 22
+        Width = 250
+        BorderStyle = bsNone
+        Lines.Strings = (
+          '57000 Metz'
+          ''
+        )
+        ReadOnly = True
+        TabOrder = 1
+        TabStop = False
+      end
+      object edt_nocom: TEdit
+        Left = 116
+        Height = 22
+        Top = 22
+        Width = 96
+        AutoSize = False
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_nocomExit
+        TabOrder = 0
+      end
+      object lbl_commune: TLabel
+        Left = 1
+        Height = 19
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = '  COMMUNE'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbl_nocom: TLabel
+        Left = 47
+        Height = 18
+        Top = 24
+        Width = 51
+        Caption = 'n° INSEE'
+        ParentColor = False
+      end
+      object lbl_nocom_erreur: TLabel
+        Left = 47
+        Height = 15
+        Top = 45
+        Width = 98
+        Caption = 'lbl_nocom_erreur'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnl_amende: TPanel
+      Left = 1
+      Height = 244
+      Top = 382
+      Width = 918
+      Align = alClient
+      ClientHeight = 244
+      ClientWidth = 918
+      TabOrder = 4
+      object pnl_amende_list: TPanel
+        Left = 1
+        Height = 221
+        Top = 22
+        Width = 406
+        Align = alLeft
+        TabOrder = 0
+      end
+      object pnl_amende_titre: TPanel
+        Left = 1
+        Height = 21
+        Top = 1
+        Width = 916
+        Align = alTop
+        ClientHeight = 21
+        ClientWidth = 916
+        TabOrder = 1
+        object lbl_amende: TLabel
+          Left = 1
+          Height = 19
+          Top = 1
+          Width = 70
+          Align = alLeft
+          AutoSize = False
+          Caption = '  AMENDE'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Calibri'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+        end
+        object lbl_amende_erreur: TLabel
+          Left = 81
+          Height = 19
+          Top = 1
+          Width = 104
+          Align = alLeft
+          BorderSpacing.Left = 10
+          Caption = 'lbl_amende_erreur'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Calibri'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object pnl_amende_ajout: TPanel
+        Left = 407
+        Height = 221
+        Top = 22
+        Width = 510
+        Align = alClient
+        TabOrder = 2
+      end
+    end
+  end
+end
