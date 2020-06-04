@@ -25,12 +25,11 @@ type
     item_archive_n2: TMenuItem;
     item_liste: TMenuItem;
     lbl_info: TLabel;
-    lbl_ariane: TLabel;
-    mnu_main: TMainMenu;
+    pnl_ariane: TPanel;
     pnl_center: TPanel;
     pnl_left: TPanel;
     procedure FormShow(Sender: TObject);
-    procedure item_accueilClick(Sender: TObject);
+    procedure mnu_item_Click(Sender: TObject);
     procedure item_inscrit_listeClick(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
   private
@@ -63,10 +62,18 @@ begin
      end;
 end;
 
-procedure Tf_accueil.item_accueilClick(Sender: TObject);
+procedure Tf_accueil.mnu_item_Click(Sender: TObject);
+var
+   item : TMenuItem;
 begin
-     lbl_ariane.Caption := '> Accueil';
+   pnl_left.show;
 
+   pnl_ariane.Caption := '';
+   item := TMenuItem(Sender);
+   repeat
+         pnl_ariane.Caption := ' >' + item.caption +pnl_ariane.Caption;
+         item := item.parent;
+   until item.parent = nil;
 end;
 
 procedure Tf_accueil.item_inscrit_listeClick(Sender: TObject);
@@ -77,13 +84,11 @@ begin
      //f_select_inscrit.init;
      f_select_inscrit.show;
 
-     f_liste.borderstyle := bsNone;
-     f_liste.parent := pnl_center;
-     f_liste.align := alClient;
-     //f_liste.init;
-     f_liste.show;
-
-     lbl_ariane.Caption := '> Inscrit > Liste';
+     f_liste_inscrits.borderstyle := bsNone;
+     f_liste_inscrits.parent := pnl_center;
+     f_liste_inscrits.align := alClient;
+     f_liste_inscrits.init;
+     f_liste_inscrits.show ;
 end;
 
 procedure Tf_accueil.item_quitterClick(Sender: TObject);
