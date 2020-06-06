@@ -14,41 +14,24 @@ type
 
   Tf_select_inscrit = class(TForm)
     btn_rechercher: TButton;
-    edt_immat: TEdit;
-    edt_nomcom: TEdit;
-    edt_insee: TEdit;
-    edt_num: TEdit;
-    edt_nomcond: TEdit;
-    edt_permis: TEdit;
-    lbl_dtdeb: TLabel;
-    lbl_dtfin: TLabel;
-    lbl_nomcom: TLabel;
-    lbl_insee: TLabel;
-    lbl_nomcond: TLabel;
-    lbl_permis: TLabel;
-    pnl_cond_btn: TPanel;
-    pnl_immat_btn: TPanel;
+    edt_numetu: TEdit;
+    edt_nometu: TEdit;
+    edt_codefiliere: TEdit;
+    lbl_codefiliere: TLabel;
+    lbl_numetu: TLabel;
+    lbl_nometu: TLabel;
     pnl_titre: TPanel;
     pnl_rechercher: TPanel;
     pnl_tous_edit: TPanel;
-    pnl_periode_btn: TPanel;
     pnl_tous_btn: TPanel;
-    pnl_num_btn: TPanel;
-    pnl_com_btn: TPanel;
-    pnl_com_edit: TPanel;
-    pnl_cond_edit: TPanel;
-    pnl_num_edit: TPanel;
-    pnl_immat_edit: TPanel;
-    pnl_periode_edit: TPanel;
+    pnl_filiere_btn: TPanel;
+    pnl_etu_btn: TPanel;
+    pnl_etu_edit: TPanel;
+    pnl_filiere_edit: TPanel;
     pnl_tous: TPanel;
-    pnl_periode: TPanel;
-    pnl_immat: TPanel;
-    pnl_cond: TPanel;
-    pnl_num: TPanel;
+    pnl_filiere: TPanel;
     pnl_choix: TPanel;
-    pnl_com: TPanel;
-    edt_dtdeb: TDateTimePicker;
-    edt_dtfin: TDateTimePicker;
+    pnl_etu: TPanel;
 
     procedure btn_rechercherClick(Sender: TObject);
     procedure init;
@@ -90,17 +73,10 @@ begin
    pnl_actif.enabled := false;
    if  pnl_tous_edit.Visible  then
        f_list_inscrit.affi_data(modele.inscrit_liste_tous)
-   else if  pnl_num_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_num(edt_num.text))
-   else if  pnl_periode_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_periode(DateToStr(edt_dtdeb.date)
-				,DateToStr(edt_dtfin.date)))
-   else if  pnl_immat_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_immat(edt_immat.text))
-   else if  pnl_cond_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_cond(edt_permis.text,edt_nomcond.text))
-   else if pnl_com_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_com(edt_insee.text,edt_nomcom.text));
+   else if  pnl_filiere_edit.visible  then
+        f_list_inscrit.affi_data(modele.inscrit_liste_num(edt_codefiliere.text))
+   else if pnl_etu_edit.visible  then
+        f_list_inscrit.affi_data(modele.inscrit_liste_com(edt_nometu.text,edt_numetu.text));
 end;
 
 procedure   Tf_select_inscrit.pnl_choix_btnClick (Sender : TObject);
@@ -120,9 +96,9 @@ end;
 
 procedure   Tf_select_inscrit.AucuneSelection;
 begin
-   NonSelectionPanel (pnl_tous);	NonSelectionPanel (pnl_num);
-   NonSelectionPanel (pnl_periode);	NonSelectionPanel (pnl_immat);
-   NonSelectionPanel (pnl_cond);	NonSelectionPanel (pnl_com);
+   NonSelectionPanel (pnl_tous);
+   NonSelectionPanel (pnl_filiere);
+   NonSelectionPanel (pnl_etu);
 end;
 
 procedure  Tf_select_inscrit.NonSelectionPanel (pnl : TPanel);

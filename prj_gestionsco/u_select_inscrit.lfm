@@ -1,7 +1,7 @@
 object f_select_inscrit: Tf_select_inscrit
-  Left = 456
+  Left = 596
   Height = 720
-  Top = 172
+  Top = 176
   Width = 280
   BorderStyle = bsNone
   Caption = 'f_select_inscrit'
@@ -19,300 +19,14 @@ object f_select_inscrit: Tf_select_inscrit
     ClientHeight = 695
     ClientWidth = 280
     TabOrder = 0
-    object pnl_num: TPanel
-      Left = 1
-      Height = 102
-      Top = 103
-      Width = 278
-      Align = alTop
-      AutoSize = True
-      ClientHeight = 102
-      ClientWidth = 278
-      TabOrder = 1
-      object pnl_num_edit: TPanel
-        Left = 1
-        Height = 70
-        Top = 31
-        Width = 276
-        Align = alTop
-        ClientHeight = 70
-        ClientWidth = 276
-        TabOrder = 1
-        object edt_num: TEdit
-          Left = 48
-          Height = 22
-          Top = 7
-          Width = 96
-          AutoSize = False
-          BorderStyle = bsNone
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 0
-        end
-      end
-      object pnl_num_btn: TPanel
-        Left = 1
-        Height = 30
-        Top = 1
-        Width = 276
-        Align = alTop
-        Caption = 'Numéro'
-        TabOrder = 0
-        OnClick = pnl_choix_btnClick
-      end
-    end
-    object pnl_periode: TPanel
-      Left = 1
-      Height = 102
-      Top = 205
-      Width = 278
-      Align = alTop
-      AutoSize = True
-      ClientHeight = 102
-      ClientWidth = 278
-      TabOrder = 2
-      object pnl_periode_edit: TPanel
-        Left = 1
-        Height = 70
-        Top = 31
-        Width = 276
-        Align = alTop
-        ClientHeight = 70
-        ClientWidth = 276
-        TabOrder = 1
-        object lbl_dtfin: TLabel
-          Left = 31
-          Height = 19
-          Top = 44
-          Width = 8
-          Caption = 'à'
-          ParentColor = False
-        end
-        object lbl_dtdeb: TLabel
-          Left = 23
-          Height = 19
-          Top = 13
-          Width = 18
-          Caption = 'De'
-          ParentColor = False
-        end
-        object edt_dtdeb: TDateTimePicker
-          Left = 49
-          Height = 23
-          Top = 11
-          Width = 97
-          CenturyFrom = 1941
-          MaxDate = 2958465
-          MinDate = -53780
-          AutoSize = False
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 0
-          BorderStyle = bsNone
-          TrailingSeparator = False
-          TextForNullDate = 'NULL'
-          LeadingZeros = True
-          NullInputAllowed = False
-          Kind = dtkDate
-          TimeFormat = tf24
-          TimeDisplay = tdHMS
-          DateMode = dmComboBox
-          Date = 41518
-          Time = 0
-          UseDefaultSeparators = True
-          HideDateTimeParts = []
-          MonthNames = 'Long'
-        end
-        object edt_dtfin: TDateTimePicker
-          Left = 49
-          Height = 22
-          Top = 42
-          Width = 97
-          CenturyFrom = 1941
-          MaxDate = 2958465
-          MinDate = -53780
-          AutoSize = False
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 1
-          BorderStyle = bsNone
-          TrailingSeparator = False
-          TextForNullDate = 'NULL'
-          LeadingZeros = True
-          Kind = dtkDate
-          TimeFormat = tf24
-          TimeDisplay = tdHMS
-          DateMode = dmComboBox
-          Date = 42331
-          Time = 0
-          UseDefaultSeparators = True
-          HideDateTimeParts = []
-          MonthNames = 'Long'
-        end
-      end
-      object pnl_periode_btn: TPanel
-        Left = 1
-        Height = 30
-        Top = 1
-        Width = 276
-        Align = alTop
-        Caption = 'Période'
-        TabOrder = 0
-        OnClick = pnl_choix_btnClick
-      end
-    end
-    object pnl_immat: TPanel
-      Left = 1
-      Height = 102
-      Top = 307
-      Width = 278
-      Align = alTop
-      AutoSize = True
-      ClientHeight = 102
-      ClientWidth = 278
-      TabOrder = 3
-      object pnl_immat_edit: TPanel
-        Left = 1
-        Height = 70
-        Top = 31
-        Width = 276
-        Align = alTop
-        ClientHeight = 70
-        ClientWidth = 276
-        TabOrder = 1
-        object edt_immat: TEdit
-          Left = 48
-          Height = 22
-          Top = 6
-          Width = 116
-          AutoSize = False
-          BorderStyle = bsNone
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 0
-        end
-      end
-      object pnl_immat_btn: TPanel
-        Left = 1
-        Height = 30
-        Top = 1
-        Width = 276
-        Align = alTop
-        Caption = 'Immatriculation'
-        TabOrder = 0
-        OnClick = pnl_choix_btnClick
-      end
-    end
-    object pnl_cond: TPanel
-      Left = 1
-      Height = 102
-      Top = 409
-      Width = 278
-      Align = alTop
-      Alignment = taLeftJustify
-      AutoSize = True
-      ClientHeight = 102
-      ClientWidth = 278
-      TabOrder = 4
-      object pnl_cond_edit: TPanel
-        Left = 1
-        Height = 70
-        Top = 31
-        Width = 276
-        Align = alTop
-        ClientHeight = 70
-        ClientWidth = 276
-        TabOrder = 1
-        object lbl_nomcond: TLabel
-          Left = 17
-          Height = 19
-          Top = 10
-          Width = 30
-          Alignment = taRightJustify
-          Caption = 'Nom'
-          ParentColor = False
-        end
-        object edt_nomcond: TEdit
-          Left = 56
-          Height = 22
-          Top = 7
-          Width = 137
-          AutoSize = False
-          BorderStyle = bsNone
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 0
-        end
-        object lbl_permis: TLabel
-          Left = 3
-          Height = 19
-          Top = 40
-          Width = 44
-          Alignment = taRightJustify
-          Caption = 'Permis'
-          ParentColor = False
-        end
-        object edt_permis: TEdit
-          Left = 56
-          Height = 22
-          Top = 41
-          Width = 90
-          AutoSize = False
-          BorderStyle = bsNone
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Calibri'
-          Font.Pitch = fpVariable
-          Font.Quality = fqDraft
-          ParentFont = False
-          TabOrder = 1
-        end
-      end
-      object pnl_cond_btn: TPanel
-        Left = 1
-        Height = 30
-        Top = 1
-        Width = 276
-        Align = alTop
-        Caption = 'Conducteur'
-        TabOrder = 0
-        OnClick = pnl_choix_btnClick
-      end
-    end
     object pnl_tous: TPanel
       Left = 1
-      Height = 102
+      Height = 62
       Top = 1
       Width = 278
       Align = alTop
       AutoSize = True
-      ClientHeight = 102
+      ClientHeight = 62
       ClientWidth = 278
       TabOrder = 0
       object pnl_tous_btn: TPanel
@@ -327,7 +41,7 @@ object f_select_inscrit: Tf_select_inscrit
       end
       object pnl_tous_edit: TPanel
         Left = 1
-        Height = 70
+        Height = 30
         Top = 31
         Width = 276
         Align = alTop
@@ -336,26 +50,27 @@ object f_select_inscrit: Tf_select_inscrit
         TabOrder = 1
       end
     end
-    object pnl_com: TPanel
+    object pnl_etu: TPanel
       Left = 1
-      Height = 100
-      Top = 511
+      Height = 102
+      Top = 63
       Width = 278
       Align = alTop
-      ClientHeight = 100
+      AutoSize = True
+      ClientHeight = 102
       ClientWidth = 278
-      TabOrder = 5
-      object pnl_com_btn: TPanel
+      TabOrder = 1
+      object pnl_etu_btn: TPanel
         Left = 1
         Height = 30
         Top = 1
         Width = 276
         Align = alTop
-        Caption = 'Commune'
+        Caption = 'Etudiant'
         TabOrder = 0
         OnClick = pnl_choix_btnClick
       end
-      object pnl_com_edit: TPanel
+      object pnl_etu_edit: TPanel
         Left = 1
         Height = 70
         Top = 31
@@ -364,20 +79,20 @@ object f_select_inscrit: Tf_select_inscrit
         ClientHeight = 70
         ClientWidth = 276
         TabOrder = 1
-        object lbl_nomcom: TLabel
-          Left = 27
-          Height = 19
-          Top = 9
-          Width = 30
+        object lbl_numetu: TLabel
+          Left = 10
+          Height = 15
+          Top = 10
+          Width = 44
           Alignment = taRightJustify
-          Caption = 'Nom'
+          Caption = 'Numéro'
           ParentColor = False
         end
-        object edt_nomcom: TEdit
-          Left = 66
+        object edt_numetu: TEdit
+          Left = 72
           Height = 22
           Top = 8
-          Width = 145
+          Width = 104
           AutoSize = False
           BorderStyle = bsNone
           Font.CharSet = ANSI_CHARSET
@@ -389,20 +104,20 @@ object f_select_inscrit: Tf_select_inscrit
           ParentFont = False
           TabOrder = 0
         end
-        object lbl_insee: TLabel
-          Left = 7
-          Height = 19
-          Top = 44
-          Width = 50
+        object lbl_nometu: TLabel
+          Left = 25
+          Height = 15
+          Top = 45
+          Width = 27
           Alignment = taRightJustify
-          Caption = 'n°INSEE'
+          Caption = 'Nom'
           ParentColor = False
         end
-        object edt_insee: TEdit
-          Left = 66
+        object edt_nometu: TEdit
+          Left = 72
           Height = 22
-          Top = 41
-          Width = 90
+          Top = 40
+          Width = 177
           AutoSize = False
           BorderStyle = bsNone
           Font.CharSet = ANSI_CHARSET
@@ -419,12 +134,12 @@ object f_select_inscrit: Tf_select_inscrit
     object pnl_rechercher: TPanel
       Left = 1
       Height = 50
-      Top = 611
+      Top = 267
       Width = 278
       Align = alTop
       ClientHeight = 50
       ClientWidth = 278
-      TabOrder = 6
+      TabOrder = 2
       object btn_rechercher: TButton
         Left = 120
         Height = 25
@@ -435,6 +150,61 @@ object f_select_inscrit: Tf_select_inscrit
         Default = True
         OnClick = btn_rechercherClick
         TabOrder = 0
+      end
+    end
+    object pnl_filiere: TPanel
+      Left = 1
+      Height = 102
+      Top = 165
+      Width = 278
+      Align = alTop
+      AutoSize = True
+      ClientHeight = 102
+      ClientWidth = 278
+      TabOrder = 3
+      object pnl_filiere_edit: TPanel
+        Left = 1
+        Height = 70
+        Top = 31
+        Width = 276
+        Align = alTop
+        ClientHeight = 70
+        ClientWidth = 276
+        TabOrder = 1
+        object edt_codefiliere: TEdit
+          Left = 72
+          Height = 22
+          Top = 22
+          Width = 104
+          AutoSize = False
+          BorderStyle = bsNone
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Calibri'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          TabOrder = 0
+        end
+        object lbl_codefiliere: TLabel
+          Left = 35
+          Height = 15
+          Top = 24
+          Width = 28
+          Caption = 'Code'
+          ParentColor = False
+        end
+      end
+      object pnl_filiere_btn: TPanel
+        Left = 1
+        Height = 30
+        Top = 1
+        Width = 276
+        Align = alTop
+        Caption = 'Filière'
+        TabOrder = 0
+        OnClick = pnl_choix_btnClick
       end
     end
   end

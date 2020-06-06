@@ -4,8 +4,8 @@ object f_gabarit: Tf_gabarit
   Top = 101
   Width = 1200
   Caption = 'Gestion des Infractions'
-  ClientHeight = 780
-  ClientWidth = 1200
+  ClientHeight = 0
+  ClientWidth = 0
   Color = 15461355
   Font.CharSet = ANSI_CHARSET
   Font.Height = -16
@@ -19,7 +19,7 @@ object f_gabarit: Tf_gabarit
     Left = 0
     Height = 30
     Top = 0
-    Width = 1200
+    Width = 0
     Align = alTop
     Caption = 'fil d''ariane'
     Font.CharSet = ANSI_CHARSET
@@ -34,9 +34,9 @@ object f_gabarit: Tf_gabarit
   end
   object pnl_selection: TPanel
     Left = 0
-    Height = 720
-    Top = 30
-    Width = 280
+    Height = 0
+    Top = 0
+    Width = 0
     Align = alClient
     Caption = 'zone de sélection'
     Color = 15461355
@@ -52,10 +52,10 @@ object f_gabarit: Tf_gabarit
   object pnl_info: TPanel
     Left = 0
     Height = 30
-    Top = 750
-    Width = 1200
+    Top = -30
+    Width = 0
     Align = alBottom
-    Caption = 'message d''information'
+    Caption = 'Message d''information'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -16
     Font.Name = 'Calibri'
@@ -65,9 +65,9 @@ object f_gabarit: Tf_gabarit
     TabOrder = 2
   end
   object pnl_travail: TPanel
-    Left = 280
-    Height = 720
-    Top = 30
+    Left = -920
+    Height = 0
+    Top = 0
     Width = 920
     Align = alRight
     Caption = 'zone de travail'
@@ -80,6 +80,7 @@ object f_gabarit: Tf_gabarit
     ParentColor = False
     ParentFont = False
     TabOrder = 3
+    OnClick = pnl_travailClick
   end
   object mnu_main: TMainMenu
     left = 144
@@ -90,7 +91,7 @@ object f_gabarit: Tf_gabarit
     end
     object item_inscrit: TMenuItem
       Caption = 'Inscrit'
-      object item_liste: TMenuItem
+      object item_inscrit_liste: TMenuItem
         Caption = 'Liste'
         OnClick = mnu_item_Click
       end

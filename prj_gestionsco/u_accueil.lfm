@@ -1,0 +1,33 @@
+object f_accueil: Tf_accueil
+  Left = 669
+  Height = 720
+  Top = 182
+  Width = 920
+  Caption = 'f_accueil'
+  ClientHeight = 720
+  ClientWidth = 920
+  OnCreate = FormCreate
+  LCLVersion = '1.6.0.4'
+  object lbl_1: TLabel
+    Left = 184
+    Height = 59
+    Top = 264
+    Width = 580
+    Caption = 'Bienvenue dans l''application'
+    Font.Height = -43
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbl_2: TLabel
+    Left = 216
+    Height = 59
+    Top = 376
+    Width = 508
+    Caption = 'de gestion de la Scolarité'
+    Font.Height = -43
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end
