@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, zcomponent, u_gabarit, u_select_inscrit,
-  u_list_inscrit, u_detail_inscrit, u_amende_list, u_amende_ajout, 
+  u_list_inscrit, u_detail_inscrit, u_notes_list, u_notes_ajout, 
 u_modele
   { you can add units after this };
 
@@ -21,8 +21,8 @@ begin
   Application.CreateForm(Tf_select_inscrit, f_select_inscrit);
   Application.CreateForm(Tf_list_inscrit, f_list_inscrit);
   Application.CreateForm(Tf_detail_inscrit, f_detail_inscrit);
-  Application.CreateForm(Tf_amende_list, f_amende_list);
-  Application.CreateForm(Tf_amende_ajout, f_amende_ajout);
+  Application.CreateForm(Tf_notes_list, f_notes_list);
+  Application.CreateForm(Tf_notes_ajout, f_notes_ajout);
   Application.Run;
 end.
 

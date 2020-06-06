@@ -10,24 +10,24 @@ uses
 
 type
 
-  { Tf_detail_inscri }
+  { Tf_detail_inscrit }
 
   Tf_detail_inscrit = class(TForm)
     btn_valider: TButton;
     btn_annuler: TButton;
     edt_dt: TDateTimePicker;
     lbl_nocom_erreur: TLabel;
-    lbl_amende_erreur: TLabel;
+    lbl_notes_erreur: TLabel;
     lbl_permis_erreur: TLabel;
     lbl_num_erreur: TLabel;
-    lbl_amende: TLabel;
+    lbl_notes: TLabel;
     lbl_immat_erreur: TLabel;
     lbl_nocom: TLabel;
-    pnl_amende_ajout: TPanel;
-    pnl_amende_list: TPanel;
-    pnl_amende: TPanel;
+    pnl_notes_ajout: TPanel;
+    pnl_notes_list: TPanel;
+    pnl_notes: TPanel;
     lbl_commune: TLabel;
-    pnl_amende_titre: TPanel;
+    pnl_notes_titre: TPanel;
     pnl_commune: TPanel;
     edt_nocom: TEdit;
     lbl_ident: TLabel;
@@ -78,14 +78,14 @@ type
   end;
 
 var
-  f_detail_inscri: Tf_detail_inscrit;
+  f_detail_inscrit: Tf_detail_inscrit;
 
 implementation
 
 
 {$R *.lfm}
 
-uses	u_feuille_style, u_list_inscrit, u_amende_list, u_amende_ajout, u_modele, u_loaddataset;
+uses	u_feuille_style, u_list_inscrit, u_notes_list, u_notes_ajout, u_modele, u_loaddataset;
 
 { Tf_detail_inscrit }
 
@@ -113,12 +113,12 @@ begin
    style.panel_travail (pnl_commune);
 	style.label_titre  (lbl_commune);        style.memo_info(mmo_commune);
 	style.label_erreur (lbl_nocom_erreur);   lbl_nocom_erreur.caption := ' ';
-   style.panel_travail (pnl_amende);
-	style.panel_travail (pnl_amende_titre);
-		style.label_titre  (lbl_amende);
-		style.label_erreur (lbl_amende_erreur);     lbl_amende_erreur.caption := ' ';
-	style.panel_travail (pnl_amende_list);
-	style.panel_travail (pnl_amende_ajout);
+   style.panel_travail (pnl_notes);
+	style.panel_travail (pnl_notes_titre);
+		style.label_titre  (lbl_notes);
+		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := ' ';
+	style.panel_travail (pnl_notes_list);
+	style.panel_travail (pnl_notes_ajout);
    edt_num.ReadOnly	:=affi;
    edt_dt.NullInputAllowed	:=false;   // valeur nulle interdite : zone obligatoirement renseignée
    edt_dt.DateMode	:=dmComboBox;   //mode liste déroulante
@@ -148,20 +148,20 @@ begin
    btn_valider.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
    btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
 
-// initialisation amende
-   lbl_amende_erreur.Caption  :='';
+// initialisation notes
+   lbl_notes_erreur.Caption  :='';
 
-   f_amende_list.borderstyle  := bsNone;
-   f_amende_list.parent	      := pnl_amende_list;
-   f_amende_list.align	      := alClient;
-   f_amende_list.init(affi);
-   f_amende_list.show;
-   f_amende_list.affi_data(modele.inscrit_amende(idinf));
-   f_amende_list.affi_total;
+   f_notes_list.borderstyle  := bsNone;
+   f_notes_list.parent	      := pnl_notes_list;
+   f_notes_list.align	      := alClient;
+   f_notes_list.init(affi);
+   f_notes_list.show;
+   f_notes_list.affi_data(modele.inscrit_notes(idinf));
+   f_notes_list.affi_total;
 
-   f_amende_ajout.borderstyle := bsNone;
-   f_amende_ajout.parent      := pnl_amende_ajout;
-   f_amende_ajout.align	      := alClient;
+   f_notes_ajout.borderstyle := bsNone;
+   f_notes_ajout.parent      := pnl_notes_ajout;
+   f_notes_ajout.align	      := alClient;
 
    show;
 
@@ -282,7 +282,7 @@ begin
 	,'Confirmez-vous la suppression de l''inscrit n°' +idinf
 	,mtConfirmation, [mbYes,mbNo], 0, mbNo) = mrYes
    THEN BEGIN
-	modele.inscrit_amende_delete (idinf);
+	modele.inscrit_notes_delete (idinf);
 	modele.inscrit_delete (idinf);
 
         f_list_inscrit.line_delete;
@@ -304,12 +304,12 @@ begin
     valide := true;
 
     erreur := '';
-    if  f_amende_list.sg_liste.RowCount = 0
+    if  f_notes_list.sg_liste.RowCount = 0
     then  begin
-          erreur := 'L''amende doit être renseignée.';
+          erreur := 'L''notes doit être renseignée.';
           valide := false;
     end;
-    lbl_amende_erreur.caption := erreur;
+    lbl_notes_erreur.caption := erreur;
 
     erreur := '';
     saisie := edt_nocom.text;
@@ -365,14 +365,14 @@ begin
 	  then  modele.inscrit_insert(edt_num.text, datetostr(edt_dt.date), edt_immat.text, edt_permis.text, edt_nocom.text)
 	  else  begin
 		modele.inscrit_update(id, datetostr(edt_dt.date), edt_immat.text, edt_permis.text, edt_nocom.text);
-	     // suppression de la composition de l'amende
-		modele.inscrit_amende_delete (edt_num.text);
+	     // suppression de la composition de l'notes
+		modele.inscrit_notes_delete (edt_num.text);
 	  end;
 
           i := 1;   // commence à 1 pour passer la ligne de titres des colonnes en ligne 0
-   	  while  ( i  <  f_amende_list.sg_liste.RowCount )
+   	  while  ( i  <  f_notes_list.sg_liste.RowCount )
    	  do  begin
-              modele.inscrit_amende_insert (edt_num.text, f_amende_list.sg_liste.Cells[0,i]);
+              modele.inscrit_notes_insert (edt_num.text, f_notes_list.sg_liste.Cells[0,i]);
               i := i +1;
           end;
    	  if id='' then f_list_inscrit.line_add(modele.inscrit_liste_num(edt_num.text))

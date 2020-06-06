@@ -25,14 +25,14 @@ Tmodele = class(TMySQL)
    function  inscrit_conducteur (num : string) : string;
    function  inscrit_commune	   (num : string) : string;
    function  vehicule_proprio	   (num : string) : string;
-   function  inscrit_amende	(num : string) : TLoadDataSet;
+   function  inscrit_notes	(num : string) : TLoadDataSet;
    function  inscrit_delit_tous  : TLoadDataSet;
 
    procedure inscrit_delete	(id_inf : string);
    procedure inscrit_insert	(id_inf, date_inf, no_immat, no_permis, no_com : string);
    procedure inscrit_update	(id_inf, date_inf, no_immat, no_permis, no_com : string);
-   procedure inscrit_amende_delete	(id_inf : string);
-   procedure inscrit_amende_insert	(id_inf, id_delit : string);
+   procedure inscrit_notes_delete	(id_inf : string);
+   procedure inscrit_notes_insert	(id_inf, id_delit : string);
 
    procedure close;
 end;
@@ -111,9 +111,9 @@ begin
      load('sp_vehicule_proprio',[num], result);
 end;
 
-function Tmodele.inscrit_amende (num : string) : TLoadDataSet;
+function Tmodele.inscrit_notes (num : string) : TLoadDataSet;
 begin
-     result := load('sp_inscrit_amende',[num]);
+     result := load('sp_inscrit_notes',[num]);
 end;
 
 function Tmodele.inscrit_delit_tous : TLoadDataSet;
@@ -136,14 +136,14 @@ begin
      exec('sp_inscrit_update',[id_inf], [date_inf, no_immat,no_permis, no_com]);
 end;
 
-procedure Tmodele.inscrit_amende_delete (id_inf : string);
+procedure Tmodele.inscrit_notes_delete (id_inf : string);
 begin
-     exec('sp_inscrit_amende_delete',[id_inf]);
+     exec('sp_inscrit_notes_delete',[id_inf]);
 end;
 
-procedure Tmodele.inscrit_amende_insert (id_inf, id_delit : string);
+procedure Tmodele.inscrit_notes_insert (id_inf, id_delit : string);
 begin
-     exec('sp_inscrit_amende_insert',[id_inf, id_delit]);
+     exec('sp_inscrit_notes_insert',[id_inf, id_delit]);
 end;
 
 begin

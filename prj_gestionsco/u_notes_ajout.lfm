@@ -1,9 +1,9 @@
-object f_amende_ajout: Tf_amende_ajout
+object f_notes_ajout: Tf_notes_ajout
   Left = 774
   Height = 154
   Top = 451
   Width = 320
-  Caption = 'f_amende_ajout'
+  Caption = 'f_notes_ajout'
   ClientHeight = 154
   ClientWidth = 320
   ParentFont = True
