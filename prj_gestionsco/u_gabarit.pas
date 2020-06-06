@@ -15,9 +15,13 @@ type
     item_accueil: TMenuItem;
     item_quitter: TMenuItem;
     item_liste: TMenuItem;
-    item_stat: TMenuItem;
+    item_archive: TMenuItem;
     item_inscrit: TMenuItem;
-    item_tarif: TMenuItem;
+    item_filiere: TMenuItem;
+    item_fil_stat: TMenuItem;
+    item_fil_liste: TMenuItem;
+    item_arch_n1: TMenuItem;
+    item_arch_n2: TMenuItem;
     mnu_main: TMainMenu;
     pnl_ariane: TPanel;
     pnl_selection: TPanel;
@@ -25,6 +29,7 @@ type
     pnl_info: TPanel;
     procedure FormShow(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
+    procedure item_fil_statClick(Sender: TObject);
     procedure mnu_item_Click(Sender: TObject);
     procedure choix_item_liste;
 
@@ -97,6 +102,11 @@ procedure Tf_gabarit.item_quitterClick(Sender: TObject);
 begin
    modele.close;
    close;
+end;
+
+procedure Tf_gabarit.item_fil_statClick(Sender: TObject);
+begin
+
 end;
 
 
