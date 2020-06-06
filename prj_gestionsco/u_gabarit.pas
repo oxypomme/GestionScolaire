@@ -60,7 +60,7 @@ begin
    pnl_ariane.Caption := '';
    item := TmenuItem(Sender);
    repeat
-         pnl_ariane.Caption := ' >' + item.caption +pnl_ariane.Caption;
+         pnl_ariane.Caption := ' >' + item.caption + pnl_ariane.Caption;
          item := item.parent;
    until item.parent = nil;
    item := TmenuItem(Sender);

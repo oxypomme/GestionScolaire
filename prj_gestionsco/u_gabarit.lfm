@@ -1,7 +1,7 @@
 object f_gabarit: Tf_gabarit
-  Left = 220
+  Left = 286
   Height = 800
-  Top = 107
+  Top = 101
   Width = 1200
   Caption = 'Gestion des Infractions'
   ClientHeight = 780
@@ -96,24 +96,25 @@ object f_gabarit: Tf_gabarit
       end
       object item_archive: TMenuItem
         Caption = 'Archive'
-        OnClick = mnu_item_Click
         object item_arch_n1: TMenuItem
           Caption = 'Archive N-1'
+          OnClick = mnu_item_Click
         end
         object item_arch_n2: TMenuItem
           Caption = 'Archive N-2'
+          OnClick = mnu_item_Click
         end
       end
     end
     object item_filiere: TMenuItem
       Caption = 'Filière'
-      OnClick = mnu_item_Click
       object item_fil_liste: TMenuItem
         Caption = 'Liste'
+        OnClick = mnu_item_Click
       end
       object item_fil_stat: TMenuItem
         Caption = 'Statistiques'
-        OnClick = item_fil_statClick
+        OnClick = mnu_item_Click
       end
     end
     object item_quitter: TMenuItem
