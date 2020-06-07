@@ -94,6 +94,7 @@
         <Filename Value="u_accueil.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="f_accueil"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit8>
     </Units>

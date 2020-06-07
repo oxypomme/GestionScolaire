@@ -29,7 +29,6 @@ type
     pnl_info: TPanel;
     procedure FormShow(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
-    procedure item_fil_statClick(Sender: TObject);
     procedure mnu_item_Click(Sender: TObject);
     procedure choix_item_accueil;
     procedure choix_item_inscrit_liste;
@@ -114,7 +113,7 @@ begin
 
    f_gabarit.width       := 1200;
    f_gabarit.height      :=  800;
-   //modele.open;
+   modele.open;
 
 end;
 
@@ -122,11 +121,6 @@ procedure Tf_gabarit.item_quitterClick(Sender: TObject);
 begin
    modele.close;
    close;
-end;
-
-procedure Tf_gabarit.item_fil_statClick(Sender: TObject);
-begin
-
 end;
 
 
