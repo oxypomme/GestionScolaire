@@ -44,7 +44,11 @@ implementation
 
 procedure Tmodele.open;
 begin
-    Bd_open ('5.48.191.192', 0, 'vie_scolaire', 'dut_projects', 'Htjl7rJEhAbduqYh', 'mysqld-5', 'libmysql64.dll');
+     Bd_open ('devbdd.iutmetz.univ-lorraine.fr', 0
+       	, 'ricatte3u_tpnote_ihm'
+       	, 'ricatte3u_appli'
+       	, '31901467'
+       	, 'mysqld-5', 'libmysql64.dll');
 end;
 
 procedure Tmodele.close;
