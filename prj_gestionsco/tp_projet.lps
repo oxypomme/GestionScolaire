@@ -32,8 +32,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="54"/>
-        <CursorPos X="45" Y="78"/>
+        <TopLine Value="51"/>
+        <CursorPos X="62" Y="98"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -47,7 +47,6 @@
         <EditorIndex Value="5"/>
         <TopLine Value="24"/>
         <CursorPos X="26" Y="31"/>
-        <ComponentState Value="1"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -91,8 +90,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="41"/>
-        <CursorPos X="43" Y="70"/>
+        <CursorPos X="39" Y="18"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit7>
@@ -183,15 +181,15 @@
       </Position3>
       <Position4>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="71" Column="45" TopLine="61"/>
+        <Caret Line="69" Column="45" TopLine="59"/>
       </Position4>
       <Position5>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="70" Column="45" TopLine="60"/>
+        <Caret Line="68" Column="45" TopLine="58"/>
       </Position5>
       <Position6>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="69" Column="45" TopLine="59"/>
+        <Caret Line="67" Column="45" TopLine="57"/>
       </Position6>
       <Position7>
         <Filename Value="u_detail_inscrit.pas"/>
@@ -199,95 +197,95 @@
       </Position7>
       <Position8>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="67" Column="45" TopLine="57"/>
+        <Caret Line="69" Column="45" TopLine="59"/>
       </Position8>
       <Position9>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="68" Column="45" TopLine="58"/>
+        <Caret Line="70" Column="45" TopLine="60"/>
       </Position9>
       <Position10>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="69" Column="45" TopLine="59"/>
+        <Caret Line="216" Column="6" TopLine="194"/>
       </Position10>
       <Position11>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="70" Column="45" TopLine="60"/>
+        <Caret Line="193" Column="6" TopLine="170"/>
       </Position11>
       <Position12>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="216" Column="6" TopLine="194"/>
+        <Caret Line="196" Column="12" TopLine="173"/>
       </Position12>
       <Position13>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="193" Column="6" TopLine="170"/>
+        <Caret Line="201" Column="19" TopLine="178"/>
       </Position13>
       <Position14>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="196" Column="12" TopLine="173"/>
+        <Caret Line="205" Column="17" TopLine="182"/>
       </Position14>
       <Position15>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="201" Column="19" TopLine="178"/>
+        <Caret Line="204" Column="24" TopLine="183"/>
       </Position15>
       <Position16>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="205" Column="17" TopLine="182"/>
+        <Caret Line="206" Column="6" TopLine="184"/>
       </Position16>
       <Position17>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="204" Column="24" TopLine="183"/>
+        <Caret Line="220" Column="6" TopLine="198"/>
       </Position17>
       <Position18>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="206" Column="6" TopLine="184"/>
+        <Caret Line="233" Column="12" TopLine="209"/>
       </Position18>
       <Position19>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="220" Column="6" TopLine="198"/>
+        <Caret Line="254" Column="6" TopLine="231"/>
       </Position19>
       <Position20>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="233" Column="12" TopLine="209"/>
+        <Caret Line="269" Column="6" TopLine="246"/>
       </Position20>
       <Position21>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="254" Column="6" TopLine="231"/>
+        <Caret Line="278" Column="6" TopLine="255"/>
       </Position21>
       <Position22>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="269" Column="6" TopLine="246"/>
+        <Caret Line="285" Column="6" TopLine="262"/>
       </Position22>
       <Position23>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="278" Column="6" TopLine="255"/>
+        <Caret Line="405" Column="6" TopLine="362"/>
       </Position23>
       <Position24>
-        <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="285" Column="6" TopLine="262"/>
+        <Filename Value="u_modele.pas"/>
+        <Caret Line="48" Column="28" TopLine="21"/>
       </Position24>
       <Position25>
-        <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="405" Column="6" TopLine="362"/>
+        <Filename Value="u_modele.pas"/>
+        <Caret Line="18" Column="64" TopLine="41"/>
       </Position25>
       <Position26>
         <Filename Value="u_modele.pas"/>
-        <Caret Line="48" Column="28" TopLine="21"/>
+        <Caret Line="63" Column="23" TopLine="41"/>
       </Position26>
       <Position27>
-        <Filename Value="u_modele.pas"/>
-        <Caret Line="18" Column="64" TopLine="41"/>
-      </Position27>
-      <Position28>
-        <Filename Value="u_modele.pas"/>
-        <Caret Line="63" Column="23" TopLine="41"/>
-      </Position28>
-      <Position29>
         <Filename Value="u_select_inscrit.pas"/>
         <Caret Line="77" Column="58" TopLine="51"/>
-      </Position29>
-      <Position30>
+      </Position27>
+      <Position28>
         <Filename Value="u_detail_inscrit.pas"/>
         <Caret Line="357" Column="97" TopLine="382"/>
+      </Position28>
+      <Position29>
+        <Filename Value="u_modele.pas"/>
+        <Caret Line="70" Column="43" TopLine="41"/>
+      </Position29>
+      <Position30>
+        <Filename Value="u_modele.pas"/>
+        <Caret Line="19" Column="41" TopLine="41"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

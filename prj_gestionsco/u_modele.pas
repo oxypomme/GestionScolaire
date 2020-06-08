@@ -15,7 +15,7 @@ Tmodele = class(TMySQL)
    { public declarations }
    procedure open;
    function  inscrit_liste_tous : TLoadDataSet;
-   function  inscrit_liste_fil   (num : string) : TLoadDataSet;
+   function  inscrit_liste_fil   (code : string) : TLoadDataSet;
    function  inscrit_liste_etu   (no_etu, nom_etu : string) : TLoadDataSet;
    function  inscrit_num	   (num : string) : TLoadDataSet;
    function  inscrit_vehicule   (num : string) : string;
@@ -59,9 +59,9 @@ begin
      result := load('sp_inscrit_liste_tous',[]);
 end;
 
-function Tmodele.inscrit_liste_fil (num : string) : TLoadDataSet;
+function Tmodele.inscrit_liste_fil (code : string) : TLoadDataSet;
 begin
-     result := load('sp_inscrit_liste_fil',[num]);
+     result := load('sp_inscrit_liste_fil',[code]);
 end;
 
 function Tmodele.inscrit_liste_etu (no_etu, nom_etu : string) : TLoadDataSet;
