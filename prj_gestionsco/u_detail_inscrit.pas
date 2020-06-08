@@ -362,9 +362,9 @@ begin
 	 saisie := edt_num.text;
 	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
 	 else begin
-	      flux := modele.inscrit_liste_num(saisie);
-	      if  NOT  flux.endOf
-	      then  erreur := 'Le numéro existe déjà';
+	      //flux := modele.inscrit_liste_num(saisie);
+	      //if  NOT  flux.endOf
+	      //then  erreur := 'Le numéro existe déjà';
 	 end;
 	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
     end;
@@ -385,8 +385,8 @@ begin
               modele.inscrit_notes_insert (edt_num.text, f_notes_list.sg_liste.Cells[0,i]);
               i := i +1;
           end;
-   	  if id='' then f_list_inscrit.line_add(modele.inscrit_liste_num(edt_num.text))
-   	  else f_list_inscrit.line_edit(modele.inscrit_liste_num(id));
+   	  //if id='' then f_list_inscrit.line_add(modele.inscrit_liste_num(edt_num.text))
+   	  //else f_list_inscrit.line_edit(modele.inscrit_liste_num(id));
    	  close;
     end;
 end;

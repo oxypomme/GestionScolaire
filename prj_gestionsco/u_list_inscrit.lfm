@@ -53,7 +53,7 @@ inherited f_list_inscrit: Tf_list_inscrit
       Height = 652
       Width = 912
       BorderStyle = bsNone
-      ColCount = 8
+      ColCount = 5
       Columns = <      
         item
           PickList.Strings = (          )
@@ -64,57 +64,36 @@ inherited f_list_inscrit: Tf_list_inscrit
         item
           PickList.Strings = (          )
           Title.Color = 15461355
-          Title.Caption = 'le'
-          Width = 100
+          Title.Caption = ''
+          Width = 50
         end      
         item
           PickList.Strings = (          )
           Title.Color = 15461355
-          Title.Caption = 'Véhicule'
-          Width = 100
-        end      
-        item
-          PickList.Strings = (          )
-          Title.Color = 15461355
-          Title.Caption = ' '
-          Width = 130
-        end      
-        item
-          PickList.Strings = (          )
-          Title.Color = 15461355
-          Title.Caption = 'Permis'
-          Width = 100
-        end      
-        item
-          PickList.Strings = (          )
-          Title.Color = 15461355
-          Title.Caption = ' '
+          Title.Caption = 'Identité'
           Width = 180
         end      
         item
           PickList.Strings = (          )
           Title.Color = 15461355
-          Title.Caption = 'Lieu'
-          Width = 80
+          Title.Caption = 'Commune domicile'
+          Width = 280
         end      
         item
           PickList.Strings = (          )
           Title.Color = 15461355
-          Title.Caption = ' '
-          Width = 180
+          Title.Caption = 'Filiere'
+          Width = 350
         end>
       GridLineWidth = 1
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goColSizing, goRowSelect]
       RowCount = 5
       ColWidths = (
         50
-        100
-        100
-        130
-        100
+        50
         180
-        80
-        180
+        280
+        350
       )
       RowHeights = (
         22

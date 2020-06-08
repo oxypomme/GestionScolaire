@@ -15,11 +15,8 @@ Tmodele = class(TMySQL)
    { public declarations }
    procedure open;
    function  inscrit_liste_tous : TLoadDataSet;
-   function  inscrit_liste_num   (num : string) : TLoadDataSet;
-   function  inscrit_liste_periode (dt1, dt2 : string) : TLoadDataSet;
-   function  inscrit_liste_cond  (no_permis, nom_cond : string) : TLoadDataSet;
-   function  inscrit_liste_immat (no_immat : string) : TLoadDataSet;
-   function  inscrit_liste_com   (no_com, nom_com : string) : TLoadDataSet;
+   function  inscrit_liste_fil   (num : string) : TLoadDataSet;
+   function  inscrit_liste_etu   (no_etu, nom_etu : string) : TLoadDataSet;
    function  inscrit_num	   (num : string) : TLoadDataSet;
    function  inscrit_vehicule   (num : string) : string;
    function  inscrit_conducteur (num : string) : string;
@@ -62,37 +59,16 @@ begin
      result := load('sp_inscrit_liste_tous',[]);
 end;
 
-// inscrit id_inf=num
-function Tmodele.inscrit_liste_num (num : string) : TLoadDataSet;
+function Tmodele.inscrit_liste_fil (num : string) : TLoadDataSet;
 begin
-     result := load('sp_inscrit_liste_num',[num]);
+     result := load('sp_inscrit_liste_fil',[num]);
 end;
 
-// inscrits qui se sont passées entre dt1 et dt2
-function Tmodele.inscrit_liste_periode (dt1, dt2 : string) : TLoadDataSet;
+function Tmodele.inscrit_liste_etu (no_etu, nom_etu : string) : TLoadDataSet;
 begin
-     result := load('sp_inscrit_liste_periode',[dt1, dt2]);
+      result := load('sp_inscrit_liste_etu',[no_etu, nom_etu]);
 end;
 
-// inscrits qui concernent les conducteurs dont le n° permis contient la valeur contenue dans no_permis
-// ou le nom du conducteur contient la valeur contenue dans nom
-function Tmodele.inscrit_liste_cond (no_permis, nom_cond : string) : TLoadDataSet;
-begin
-      result := load('sp_inscrit_liste_cond',[no_permis, nom_cond]);
-end;
-
-// inscrits qui concernent l'immatriculation no_immat
-function Tmodele.inscrit_liste_immat (no_immat : string) : TLoadDataSet;
-begin
-      result := load('sp_inscrit_liste_immat',[no_immat]);
-end;
-
-// inscrits commises dans les communes dont le n° INSEE contient la valeur contenue dans no_com
-// ou  le nom contient la valeur contenue dans nom_com
-function Tmodele.inscrit_liste_com (no_com, nom_com : string) : TLoadDataSet;
-begin
-      result := load('sp_inscrit_liste_com',[no_com, nom_com]);
-end;
 
 function Tmodele.inscrit_num (num : string) : TLoadDataSet;
 begin

@@ -74,9 +74,9 @@ begin
    if  pnl_tous_edit.Visible  then
        f_list_inscrit.affi_data(modele.inscrit_liste_tous)
    else if  pnl_filiere_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_num(edt_codefiliere.text))
+        f_list_inscrit.affi_data(modele.inscrit_liste_fil(edt_codefiliere.text))
    else if pnl_etu_edit.visible  then
-        f_list_inscrit.affi_data(modele.inscrit_liste_com(edt_nometu.text,edt_numetu.text));
+        f_list_inscrit.affi_data(modele.inscrit_liste_etu(edt_nometu.text,edt_numetu.text));
 end;
 
 procedure   Tf_select_inscrit.pnl_choix_btnClick (Sender : TObject);
