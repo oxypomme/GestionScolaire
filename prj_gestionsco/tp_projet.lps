@@ -32,8 +32,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="51"/>
-        <CursorPos X="62" Y="98"/>
+        <TopLine Value="55"/>
+        <CursorPos X="89" Y="84"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -90,6 +90,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
+        <TopLine Value="41"/>
         <CursorPos X="39" Y="18"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
@@ -166,7 +167,7 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit16>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="u_detail_inscrit.pas"/>
         <Caret Line="70" Column="45" TopLine="60"/>
@@ -265,28 +266,20 @@
       </Position24>
       <Position25>
         <Filename Value="u_modele.pas"/>
-        <Caret Line="18" Column="64" TopLine="41"/>
+        <Caret Line="63" Column="23" TopLine="41"/>
       </Position25>
       <Position26>
-        <Filename Value="u_modele.pas"/>
-        <Caret Line="63" Column="23" TopLine="41"/>
-      </Position26>
-      <Position27>
         <Filename Value="u_select_inscrit.pas"/>
         <Caret Line="77" Column="58" TopLine="51"/>
-      </Position27>
-      <Position28>
-        <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="357" Column="97" TopLine="382"/>
-      </Position28>
-      <Position29>
+      </Position26>
+      <Position27>
         <Filename Value="u_modele.pas"/>
         <Caret Line="70" Column="43" TopLine="41"/>
-      </Position29>
-      <Position30>
-        <Filename Value="u_modele.pas"/>
-        <Caret Line="19" Column="41" TopLine="41"/>
-      </Position30>
+      </Position27>
+      <Position28>
+        <Filename Value="u_select_inscrit.pas"/>
+        <Caret Line="79" Column="8" TopLine="51"/>
+      </Position28>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
