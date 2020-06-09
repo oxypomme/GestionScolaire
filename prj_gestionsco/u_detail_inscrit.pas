@@ -64,6 +64,7 @@ type
     pnl_titre: TPanel;
     procedure btn_retourClick(Sender: TObject);
     procedure btn_validerClick(Sender: TObject);
+    procedure cbo_filiereChange(Sender: TObject);
     procedure init   ( idinf : string; affi : boolean);
     procedure detail ( idinf : string);
     procedure edit   ( idinf : string);
@@ -316,7 +317,7 @@ begin
     saisie := edt_telephone.text;
     if  NOT (saisie = '')
     then  begin
-             ch  := modele.inscrit_conducteur(saisie);
+             //ch  := modele.inscrit_conducteur(saisie);
              if  ch = ''  then  erreur := 'numéro inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
@@ -325,7 +326,7 @@ begin
     saisie := edt_adresse.text;
     if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
     else  begin
-             ch := modele.inscrit_vehicule(saisie);
+             //ch := modele.inscrit_vehicule(saisie);
 	  if  ch = ''  then erreur := 'numéro inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
@@ -334,7 +335,7 @@ begin
     saisie := edt_adresse.text;
     if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
     else  begin
-             ch := modele.inscrit_vehicule(saisie);
+             //ch := modele.inscrit_vehicule(saisie);
 	  if  ch = ''  then erreur := 'numéro inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
@@ -372,6 +373,17 @@ begin
    	  //else f_list_inscrit.line_edit(modele.inscrit_liste_num(id));
    	  close;
     end;
+end;
+
+procedure Tf_detail_inscrit.cbo_filiereChange(Sender: TObject);
+var
+   flux : Tloaddataset;
+begin
+     flux := modele.filiere_code(cbo_filiere.Text);
+     flux.read;
+       lbl_fillib_court.caption	 := flux.Get('lib_court');
+       lbl_fillib_milong.caption := flux.Get('lib_milong');
+     flux.destroy;
 end;
 
 procedure Tf_detail_inscrit.edt_Enter(Sender : TObject);

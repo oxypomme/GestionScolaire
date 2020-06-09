@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2343
+  Left = 2465
   Height = 701
-  Top = 203
+  Top = 239
   Width = 920
   Caption = 'f_detail_infraction'
   ClientHeight = 701
@@ -497,6 +497,7 @@ object f_detail_inscrit: Tf_detail_inscrit
           '302-5KTMJ1'
           '302-5KTMI7'
         )
+        OnChange = cbo_filiereChange
         Style = csDropDownList
         TabOrder = 0
         Text = '302-5KTMJ1'
