@@ -57,9 +57,10 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
         <TopLine Value="343"/>
-        <CursorPos X="17" Y="367"/>
+        <CursorPos X="49" Y="348"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -88,9 +89,8 @@
       <Unit7>
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="41"/>
+        <TopLine Value="57"/>
         <CursorPos X="39" Y="18"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
