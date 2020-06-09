@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2221
+  Left = 2064
   Height = 701
-  Top = 191
+  Top = 239
   Width = 920
   Caption = 'f_detail_infraction'
   ClientHeight = 701
@@ -98,7 +98,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Caption = 'Téléphone'
         ParentColor = False
       end
-      object edt_permis: TEdit
+      object edt_telephone: TEdit
         Left = 48
         Height = 22
         Top = 40
@@ -106,7 +106,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         AutoSize = False
         CharCase = ecUppercase
         OnEnter = edt_Enter
-        OnExit = edt_permisExit
+        OnExit = edt_telephoneExit
         TabOrder = 0
       end
       object lbl_contact: TLabel

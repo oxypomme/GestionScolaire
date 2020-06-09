@@ -56,7 +56,7 @@ type
     lbl_adresse: TLabel;
     pnl_contact: TPanel;
     btn_retour: TButton;
-    edt_permis: TEdit;
+    edt_telephone: TEdit;
     lbl_contact: TLabel;
     lbl_telephone: TLabel;
     pnl_detail: TPanel;
@@ -67,7 +67,7 @@ type
     procedure edt_adresseExit(Sender: TObject);
     procedure edt_nofiliereExit(Sender: TObject);
     procedure edt_numExit(Sender: TObject);
-    procedure edt_permisExit(Sender: TObject);
+    procedure edt_telephoneExit(Sender: TObject);
     procedure init   ( idinf : string; affi : boolean);
     procedure detail ( idinf : string);
     procedure edit   ( idinf : string);
@@ -112,28 +112,28 @@ begin
    style.panel_travail (pnl_detail);
    style.panel_travail (pnl_ident);
 	style.label_titre  (lbl_ident);
-        style.label_erreur (lbl_num_erreur);     lbl_num_erreur.caption := ' test';
-        style.label_erreur (lbl_nom_erreur);     lbl_nom_erreur.caption := ' test';
-        style.label_erreur (lbl_prenom_erreur);  lbl_prenom_erreur.caption := ' test';
+        style.label_erreur (lbl_num_erreur);     lbl_num_erreur.caption := '';
+        style.label_erreur (lbl_nom_erreur);     lbl_nom_erreur.caption := '';
+        style.label_erreur (lbl_prenom_erreur);  lbl_prenom_erreur.caption := '';
    style.panel_travail (pnl_adresse);
 	style.label_titre  (lbl_adresse);
-	style.label_erreur (lbl_adresse_erreur);      lbl_adresse_erreur.caption := ' test';
-        style.label_erreur (lbl_codepostal_erreur);   lbl_codepostal_erreur.caption := ' test';
-        style.label_erreur (lbl_commune_erreur);      lbl_commune_erreur.caption := ' test';
+	style.label_erreur (lbl_adresse_erreur);      lbl_adresse_erreur.caption := '';
+        style.label_erreur (lbl_codepostal_erreur);   lbl_codepostal_erreur.caption := '';
+        style.label_erreur (lbl_commune_erreur);      lbl_commune_erreur.caption := '';
    style.panel_travail (pnl_contact);
 	style.label_titre  (lbl_contact);
-	style.label_erreur (lbl_telephone_erreur);  lbl_telephone_erreur.caption := ' test';
-        style.label_erreur (lbl_portable_erreur);   lbl_portable_erreur.caption := ' test';
-        style.label_erreur (lbl_mel_erreur);        lbl_mel_erreur.caption := ' test';
+	style.label_erreur (lbl_telephone_erreur);  lbl_telephone_erreur.caption := '';
+        style.label_erreur (lbl_portable_erreur);   lbl_portable_erreur.caption := '';
+        style.label_erreur (lbl_mel_erreur);        lbl_mel_erreur.caption := '';
    style.panel_travail (pnl_filiere);
 	style.label_titre  (lbl_filiere);
-	style.label_erreur (lbl_filiere_erreur);   lbl_filiere_erreur.caption := ' test';
+	style.label_erreur (lbl_filiere_erreur);   lbl_filiere_erreur.caption := '';
         lbl_fillib_court.caption := ' ';
         lbl_fillib_milong.caption := ' ';
    style.panel_travail (pnl_notes);
 	style.panel_travail (pnl_notes_titre);
 		style.label_titre  (lbl_notes);
-		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := ' test';
+		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := '';
 	style.panel_travail (pnl_notes_list);
 	style.panel_travail (pnl_notes_ajout);
    edt_num.ReadOnly	:=affi;
@@ -149,8 +149,8 @@ begin
    //mmo_proprio.ReadOnly	:=true;
 // initialisation conducteur
  //  lbl_telephone_erreur.caption	:='';
-  // edt_permis.clear;
-//   edt_permis.ReadOnly		:=affi;
+  // edt_telephone.clear;
+//   edt_telephone.ReadOnly		:=affi;
    //mmo_conducteur.clear;
    //mmo_conducteur.ReadOnly :=true;
 // initialisation commune
@@ -254,17 +254,26 @@ procedure Tf_detail_inscrit.affi_page;
 var
    flux : Tloaddataset;
 begin
-   //flux   := modele.inscrit_num(id);
-   //flux.read;
-   //edt_num.text	:= flux.Get('id_inf');
-   //edt_dt.date	:= strtodate(flux.Get('date_inf'));
-   //edt_adresse.text	:= flux.Get('no_immat');
-   //edt_permis.text	:= flux.Get('no_permis');
-   //edt_nofiliere.text	:= flux.Get('no_com');
-   //flux.destroy;
+   flux   := modele.inscrit_num(id);
+   flux.read;
+   edt_num.text	:= flux.Get('id');
+   edt_nom.text	:= flux.Get('nom');
+   if (flux.Get('civ')='M') then
+      cbo_civilite.itemindex := 0
+   else
+      cbo_civilite.itemindex := 1;
+   edt_prenom.text	:= flux.Get('prenom');
+   edt_adresse.text	:= flux.Get('adresse');
+   edt_codepostal.text	:= flux.Get('cp');
+   edt_commune.text	:= flux.Get('ville');
+   edt_telephone.text	:= flux.Get('telephone');
+   edt_portable.text	:= flux.Get('portable');
+   edt_mel.text	:= flux.Get('mel');
+
+   flux.destroy;
 
    //affi_vehicule	(edt_adresse.text);
-   //affi_conducteur	(edt_permis.text);
+   //affi_conducteur	(edt_telephone.text);
    //affi_commune	(edt_nofiliere.text);
 end;
 
@@ -336,13 +345,13 @@ begin
     //valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_nofiliere)  AND  valide;
 
     erreur := '';
-    saisie := edt_permis.text;
+    saisie := edt_telephone.text;
     if  NOT (saisie = '')
     then  begin
              ch  := modele.inscrit_conducteur(saisie);
              if  ch = ''  then  erreur := 'numéro inexistant.';
     end;
-    valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_permis)  AND  valide;
+    valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
        erreur := '';
     saisie := edt_adresse.text;
     if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
@@ -377,9 +386,9 @@ begin
     then  messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
     else  begin
           //if  id =''
-	  //then  modele.inscrit_insert(edt_num.text, datetostr(edt_dt.date), edt_adresse.text, edt_permis.text, edt_nofiliere.text)
+	  //then  modele.inscrit_insert(edt_num.text, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text)
 	  //else  begin
-	//	modele.inscrit_update(id, datetostr(edt_dt.date), edt_adresse.text, edt_permis.text, edt_nofiliere.text);
+	//	modele.inscrit_update(id, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text);
 	     // suppression de la composition de l'notes
 		modele.inscrit_notes_delete (edt_num.text);
 	  //end;
@@ -415,11 +424,11 @@ begin
    edt_num.text := TRIM(edt_num.text);
 end;
 
-procedure Tf_detail_inscrit.edt_permisExit(Sender: TObject);
+procedure Tf_detail_inscrit.edt_telephoneExit(Sender: TObject);
 begin
-   edt_permis.text := TRIM(edt_permis.text);
-   IF   NOT  ( edt_permis.text = oldvaleur )
-   THEN	affi_conducteur (edt_permis.text);
+   edt_telephone.text := TRIM(edt_telephone.text);
+   IF   NOT  ( edt_telephone.text = oldvaleur )
+   THEN	affi_conducteur (edt_telephone.text);
 end;
 
 procedure Tf_detail_inscrit.edt_Enter(Sender : TObject);
