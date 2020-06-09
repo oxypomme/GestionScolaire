@@ -352,7 +352,8 @@ begin
              if  ch = ''  then  erreur := 'numéro inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
-       erreur := '';
+
+    erreur := '';
     saisie := edt_adresse.text;
     if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
     else  begin

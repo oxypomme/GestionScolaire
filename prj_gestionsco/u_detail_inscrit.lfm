@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2064
+  Left = 2399
   Height = 701
-  Top = 239
+  Top = 216
   Width = 920
   Caption = 'f_detail_infraction'
   ClientHeight = 701
@@ -147,6 +147,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 40
         Width = 128
         AutoSize = False
+        OnEnter = edt_Enter
         TabOrder = 1
       end
       object lbl_portable: TLabel
@@ -163,6 +164,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 40
         Width = 312
         AutoSize = False
+        OnEnter = edt_Enter
         TabOrder = 2
       end
       object lbl_mel: TLabel
@@ -261,6 +263,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Height = 26
         Top = 64
         Width = 113
+        OnEnter = edt_Enter
         TabOrder = 1
       end
       object edt_commune: TEdit
@@ -268,6 +271,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Height = 26
         Top = 64
         Width = 272
+        OnEnter = edt_Enter
         TabOrder = 2
       end
       object lbl_codepostal_erreur: TLabel
@@ -317,6 +321,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Width = 80
         AutoSize = False
         CharCase = ecUppercase
+        OnEnter = edt_Enter
         OnExit = edt_numExit
         ReadOnly = True
         TabOrder = 0
@@ -383,6 +388,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 40
         Width = 168
         AutoSize = False
+        OnEnter = edt_Enter
         TabOrder = 2
       end
       object edt_prenom: TEdit
@@ -391,6 +397,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 40
         Width = 184
         AutoSize = False
+        OnEnter = edt_Enter
         TabOrder = 3
       end
       object lbl_nom: TLabel
@@ -482,7 +489,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         ParentFont = False
       end
       object cbo_filiere: TComboBox
-        Left = 45
+        Left = 47
         Height = 26
         Top = 19
         Width = 115
