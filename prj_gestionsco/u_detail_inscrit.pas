@@ -112,66 +112,72 @@ begin
    style.panel_travail (pnl_detail);
    style.panel_travail (pnl_ident);
 	style.label_titre  (lbl_ident);
-        style.label_erreur (lbl_num_erreur);     lbl_num_erreur.caption := ' ';
+        style.label_erreur (lbl_num_erreur);     lbl_num_erreur.caption := ' test';
+        style.label_erreur (lbl_nom_erreur);     lbl_nom_erreur.caption := ' test';
+        style.label_erreur (lbl_prenom_erreur);  lbl_prenom_erreur.caption := ' test';
    style.panel_travail (pnl_adresse);
-	style.label_titre  (lbl_adresse);//       style.memo_info(mmo_vehicule);
-	style.label_erreur (lbl_adresse_erreur);   lbl_adresse_erreur.caption := ' ';
-        //style.memo_info    (mmo_proprio);
+	style.label_titre  (lbl_adresse);
+	style.label_erreur (lbl_adresse_erreur);      lbl_adresse_erreur.caption := ' test';
+        style.label_erreur (lbl_codepostal_erreur);   lbl_codepostal_erreur.caption := ' test';
+        style.label_erreur (lbl_commune_erreur);      lbl_commune_erreur.caption := ' test';
    style.panel_travail (pnl_contact);
-	style.label_titre  (lbl_contact);//     style.memo_info (mmo_conducteur);
-	style.label_erreur (lbl_telephone_erreur);  lbl_telephone_erreur.caption := ' ';
+	style.label_titre  (lbl_contact);
+	style.label_erreur (lbl_telephone_erreur);  lbl_telephone_erreur.caption := ' test';
+        style.label_erreur (lbl_portable_erreur);   lbl_portable_erreur.caption := ' test';
+        style.label_erreur (lbl_mel_erreur);        lbl_mel_erreur.caption := ' test';
    style.panel_travail (pnl_filiere);
-	style.label_titre  (lbl_filiere);//        style.memo_info(mmo_commune);
-	style.label_erreur (lbl_filiere_erreur);   lbl_filiere_erreur.caption := ' ';
+	style.label_titre  (lbl_filiere);
+	style.label_erreur (lbl_filiere_erreur);   lbl_filiere_erreur.caption := ' test';
+        lbl_fillib_court.caption := ' ';
+        lbl_fillib_milong.caption := ' ';
    style.panel_travail (pnl_notes);
 	style.panel_travail (pnl_notes_titre);
 		style.label_titre  (lbl_notes);
-		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := ' ';
+		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := ' test';
 	style.panel_travail (pnl_notes_list);
 	style.panel_travail (pnl_notes_ajout);
    edt_num.ReadOnly	:=affi;
-   //edt_dt.NullInputAllowed	:=false;   // valeur nulle interdite : zone obligatoirement renseignée
-   //edt_dt.DateMode	:=dmComboBox;   //mode liste déroulante
-   //edt_dt.ReadOnly	:=affi;
+
 // initialisation véhicule
-   lbl_adresse_erreur.caption	:='';
-   edt_adresse.clear;
-   edt_adresse.ReadOnly	:=affi;
+//   lbl_adresse_erreur.caption	:='';
+//   edt_adresse.clear;
+//   edt_adresse.ReadOnly	:=affi;
    //mmo_vehicule.clear;
    //mmo_vehicule.ReadOnly	:=true;
-   lbl_contact.visible	:=false;   // invisible par défaut
+//   lbl_contact.visible	:=false;   // invisible par défaut
    //mmo_proprio.clear;
    //mmo_proprio.ReadOnly	:=true;
 // initialisation conducteur
-   lbl_telephone_erreur.caption	:='';
-   edt_permis.clear;
-   edt_permis.ReadOnly		:=affi;
+ //  lbl_telephone_erreur.caption	:='';
+  // edt_permis.clear;
+//   edt_permis.ReadOnly		:=affi;
    //mmo_conducteur.clear;
    //mmo_conducteur.ReadOnly :=true;
 // initialisation commune
-   lbl_filiere_erreur.caption	:='';
+//   lbl_filiere_erreur.caption	:='';
    //edt_nofiliere.clear;
    //edt_nofiliere.ReadOnly		:=affi;
    //mmo_commune.clear;
    //mmo_commune.ReadOnly	:=true;
+
    btn_retour.visible	:=affi;  // visible quand affichage détail
    btn_valider.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
    btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
 
 // initialisation notes
-   lbl_notes_erreur.Caption  :='';
+//   lbl_notes_erreur.Caption  :='';
 
-   f_notes_list.borderstyle  := bsNone;
-   f_notes_list.parent	      := pnl_notes_list;
-   f_notes_list.align	      := alClient;
-   f_notes_list.init(affi);
-   f_notes_list.show;
-   f_notes_list.affi_data(modele.inscrit_notes(idinf));
-   f_notes_list.affi_total;
+//   f_notes_list.borderstyle  := bsNone;
+//   f_notes_list.parent	      := pnl_notes_list;
+ //  f_notes_list.align	      := alClient;
+//   f_notes_list.init(affi);
+//   f_notes_list.show;
+//   f_notes_list.affi_data(modele.inscrit_notes(idinf));
+//   f_notes_list.affi_total;
 
-   f_notes_ajout.borderstyle := bsNone;
-   f_notes_ajout.parent      := pnl_notes_ajout;
-   f_notes_ajout.align	      := alClient;
+//   f_notes_ajout.borderstyle := bsNone;
+//   f_notes_ajout.parent      := pnl_notes_ajout;
+//   f_notes_ajout.align	      := alClient;
 
    show;
 
@@ -248,17 +254,17 @@ procedure Tf_detail_inscrit.affi_page;
 var
    flux : Tloaddataset;
 begin
-   flux   := modele.inscrit_num(id);
-   flux.read;
-   edt_num.text	:= flux.Get('id_inf');
+   //flux   := modele.inscrit_num(id);
+   //flux.read;
+   //edt_num.text	:= flux.Get('id_inf');
    //edt_dt.date	:= strtodate(flux.Get('date_inf'));
-   edt_adresse.text	:= flux.Get('no_immat');
-   edt_permis.text	:= flux.Get('no_permis');
+   //edt_adresse.text	:= flux.Get('no_immat');
+   //edt_permis.text	:= flux.Get('no_permis');
    //edt_nofiliere.text	:= flux.Get('no_com');
-   flux.destroy;
+   //flux.destroy;
 
-   affi_vehicule	(edt_adresse.text);
-   affi_conducteur	(edt_permis.text);
+   //affi_vehicule	(edt_adresse.text);
+   //affi_conducteur	(edt_permis.text);
    //affi_commune	(edt_nofiliere.text);
 end;
 
@@ -282,7 +288,6 @@ procedure Tf_detail_inscrit.add;
 begin
    init ('',false);   // pas de numéro d'inscrit
    pnl_titre.caption   := 'Nouvelle inscrit';
-   //edt_dt.Date	           := date;   // initialisation à la date du jour
    edt_num.setFocus;
 end;
 
