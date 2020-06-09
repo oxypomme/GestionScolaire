@@ -1081,6 +1081,17 @@ object f_liste: Tf_liste
         ShowHint = True
         ParentShowHint = False
       end
+      object spedt_nblig: TSpinEdit
+        Left = 28
+        Height = 23
+        Top = 5
+        Width = 50
+        MaxValue = 50
+        MinValue = 2
+        OnChange = spedt_nbligChange
+        TabOrder = 0
+        Value = 20
+      end
     end
   end
   object pnl_affi: TPanel

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
-  Grids, ExtCtrls, Buttons,
+  Grids, ExtCtrls, Buttons, Spin,
   u_loaddataset;
 
 type
@@ -28,6 +28,7 @@ type
     pnl_titre: TPanel;
     pnl_btn: TPanel;
     sg_liste: TStringGrid;
+    spedt_nblig: TSpinEdit;
 
     procedure btn_page_firstClick(Sender: TObject);
     procedure btn_page_lastClick(Sender: TObject);
@@ -42,6 +43,7 @@ type
     procedure line_add  (ligne : Array of string);
     procedure line_edit (ligne : TLoadDataSet);
     procedure line_delete;
+    procedure spedt_nbligChange(Sender: TObject);
 
     function  SumColumn (cle : string)   : real;
     function  SumColumn (p : integer)    : real;
@@ -213,6 +215,11 @@ begin
         then btn_page_lastClick(btn_page_last)
         else affi_page;
    end;
+end;
+
+procedure Tf_liste.spedt_nbligChange(Sender: TObject);
+begin
+  nblignesparpage := spedt_nblig.Value;
 end;
 
 function  Tf_liste.SumColumn (cle : string)   : real;
