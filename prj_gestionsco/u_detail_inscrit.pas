@@ -64,10 +64,6 @@ type
     pnl_titre: TPanel;
     procedure btn_retourClick(Sender: TObject);
     procedure btn_validerClick(Sender: TObject);
-    procedure edt_adresseExit(Sender: TObject);
-    procedure edt_nofiliereExit(Sender: TObject);
-    procedure edt_numExit(Sender: TObject);
-    procedure edt_telephoneExit(Sender: TObject);
     procedure init   ( idinf : string; affi : boolean);
     procedure detail ( idinf : string);
     procedure edit   ( idinf : string);
@@ -214,14 +210,14 @@ procedure Tf_detail_inscrit.affi_page;
 var
    flux : Tloaddataset;
 begin
+   edt_telephone.text	:= '';
+   edt_portable.text	:= '';
+
    flux   := modele.inscrit_num(id);
    flux.read;
-   edt_num.text	:= flux.Get('id');
-   edt_nom.text	:= flux.Get('nom');
-   if (flux.Get('civ')='M') then
-      cbo_civilite.itemindex := 0
-   else
-      cbo_civilite.itemindex := 1;
+   edt_num.text	        := flux.Get('id');
+   edt_nom.text 	:= flux.Get('nom');
+   cbo_civilite.text    := flux.Get('civ');
    edt_prenom.text	:= flux.Get('prenom');
    edt_adresse.text	:= flux.Get('adresse');
    edt_codepostal.text	:= flux.Get('cp');
@@ -238,20 +234,37 @@ procedure Tf_detail_inscrit.detail (idinf : string);
 begin
    init (idinf, true);    // mode affichage
    pnl_titre.caption	:= 'Détail d''une inscrit';
+   edt_num.enabled	 := true;
+   cbo_civilite.enabled	 := false;
+   cbo_filiere.enabled   := false;
    btn_retour.setFocus;
 end;
 
 procedure Tf_detail_inscrit.edit (idinf : string);
 begin
    init (idinf, false);
-   pnl_titre.caption	:= 'Modification d''un inscrit';
-   edt_num.ReadOnly	 := true;
+   pnl_titre.caption	 := 'Modification d''un inscrit';
+   edt_num.enabled	 := false;
+   cbo_civilite.enabled	 := true;
+   cbo_filiere.enabled   := false;
 end;
 
 procedure Tf_detail_inscrit.add;
 begin
    init ('',false);   // pas de numéro d'inscrit
-   pnl_titre.caption   := 'Nouvel inscrit';
+   pnl_titre.caption   := 'Nouvel inscription';
+   edt_num.text	        := '';
+   edt_nom.text 	:= '';
+   edt_prenom.text	:= '';
+   edt_adresse.text	:= '';
+   edt_codepostal.text	:= '';
+   edt_commune.text	:= '';
+   edt_telephone.text	:= '';
+   edt_portable.text	:= '';
+   edt_mel.text	        := '';
+   edt_num.enabled	 := true;
+   cbo_civilite.enabled	 := true;
+   cbo_filiere.enabled   := true;
    edt_num.setFocus;
 end;
 
@@ -294,7 +307,7 @@ begin
     //saisie := edt_nofiliere.text;
     if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
     else  begin
-             ch := modele.inscrit_commune(saisie);
+             //ch := modele.inscrit_commune(saisie);
 	  if  ch = ''  then erreur := 'numéro inexistant.';
     end;
     //valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_nofiliere)  AND  valide;
@@ -361,37 +374,10 @@ begin
     end;
 end;
 
-procedure Tf_detail_inscrit.edt_adresseExit(Sender: TObject);
-begin
-   edt_adresse.text := TRIM(edt_adresse.text);
-   //IF   NOT  ( edt_adresse.text = oldvaleur )
-   //THEN	affi_vehicule (edt_adresse.text);
-end;
-
-procedure Tf_detail_inscrit.edt_nofiliereExit(Sender: TObject);
-begin
-   //edt_nofiliere.text := TRIM(edt_nofiliere.text);
-   IF   NOT  ( cbo_filiere.text = oldvaleur )
-   THEN	affi_filiere (cbo_filiere.text);
-end;
-
-procedure Tf_detail_inscrit.edt_numExit(Sender: TObject);
-begin
-   edt_num.text := TRIM(edt_num.text);
-end;
-
-procedure Tf_detail_inscrit.edt_telephoneExit(Sender: TObject);
-begin
-   edt_telephone.text := TRIM(edt_telephone.text);
-   //IF   NOT  ( edt_telephone.text = oldvaleur )
-   //THEN	affi_conducteur (edt_telephone.text);
-end;
-
 procedure Tf_detail_inscrit.edt_Enter(Sender : TObject);
 begin
    oldvaleur := TEdit(Sender).text;
 end;
-
 
 end.
 

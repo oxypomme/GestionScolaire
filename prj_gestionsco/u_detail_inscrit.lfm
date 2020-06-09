@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2399
+  Left = 2343
   Height = 701
-  Top = 216
+  Top = 203
   Width = 920
   Caption = 'f_detail_infraction'
   ClientHeight = 701
@@ -106,7 +106,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         AutoSize = False
         CharCase = ecUppercase
         OnEnter = edt_Enter
-        OnExit = edt_telephoneExit
         TabOrder = 0
       end
       object lbl_contact: TLabel
@@ -223,7 +222,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         AutoSize = False
         CharCase = ecUppercase
         OnEnter = edt_Enter
-        OnExit = edt_adresseExit
         TabOrder = 0
       end
       object lbl_adresse: TLabel
@@ -322,7 +320,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         AutoSize = False
         CharCase = ecUppercase
         OnEnter = edt_Enter
-        OnExit = edt_numExit
         ReadOnly = True
         TabOrder = 0
       end
@@ -495,12 +492,14 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 19
         Width = 115
         ItemHeight = 18
+        ItemIndex = 0
         Items.Strings = (
           '302-5KTMJ1'
           '302-5KTMI7'
         )
         Style = csDropDownList
         TabOrder = 0
+        Text = '302-5KTMJ1'
       end
       object lbl_fillib_court: TLabel
         Left = 186
