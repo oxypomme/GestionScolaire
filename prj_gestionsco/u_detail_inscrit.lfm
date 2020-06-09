@@ -316,7 +316,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       TabOrder = 0
       object edt_num: TEdit
         Left = 48
-        Height = 22
+        Height = 26
         Top = 40
         Width = 80
         AutoSize = False
@@ -379,12 +379,13 @@ object f_detail_inscrit: Tf_detail_inscrit
           'M'
           'Mme'
         )
+        Style = csDropDownList
         TabOrder = 1
         Text = 'M'
       end
       object edt_nom: TEdit
         Left = 256
-        Height = 22
+        Height = 26
         Top = 40
         Width = 168
         AutoSize = False
@@ -393,7 +394,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_prenom: TEdit
         Left = 472
-        Height = 22
+        Height = 24
         Top = 40
         Width = 184
         AutoSize = False
@@ -494,6 +495,11 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 19
         Width = 115
         ItemHeight = 18
+        Items.Strings = (
+          '302-5KTMJ1'
+          '302-5KTMI7'
+        )
+        Style = csDropDownList
         TabOrder = 0
       end
       object lbl_fillib_court: TLabel

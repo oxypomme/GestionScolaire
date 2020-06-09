@@ -77,9 +77,7 @@ type
 
   private
     procedure affi_page;
-    procedure affi_vehicule      (num : string);
-    procedure affi_conducteur    (num : string);
-    procedure affi_commune       (num  : string);
+    procedure affi_filiere       (code : string);
     function  affi_erreur_saisie (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
 
     { private declarations }
@@ -187,46 +185,7 @@ begin
 
 end;
 
-procedure Tf_detail_inscrit.affi_vehicule (num : string);
-var
-   ch : string;
-begin
-   //mmo_vehicule.clear;
-   //mmo_proprio.clear;
-   lbl_contact.visible := false;
-   //if  num = ''
-   //then  mmo_vehicule.lines.add('véhicule non identifié.')
-   //else  begin
-         ch := modele.inscrit_vehicule(num);
-         //if  ch = ''	then mmo_vehicule.lines.add('immatriculation inconnue.')
-         //else begin
-                //mmo_vehicule.lines.text := ch;
-                ch := modele.vehicule_proprio(num);
-                //if  ch =''
-                //then  mmo_vehicule.lines.add('propriétaire inconnu.')
-                //else begin
-                        lbl_contact.visible := true;
-                        //mmo_proprio.lines.text := ch;
-                     //end;
-              //end;
-   //end;
-end;
-
-procedure Tf_detail_inscrit.affi_conducteur (num : string);
-var
-   ch : string;
-begin
-   //mmo_conducteur.clear;
-   //if  num = ''
-   //then  mmo_conducteur.lines.add('conducteur non identifié.')
-   //else  begin
-         ch := modele.inscrit_conducteur(num);
-         //if  ch = ''	then mmo_conducteur.lines.add('conducteur  inconnu.')
-         //else  mmo_conducteur.lines.text := ch;
-   //end;
-end;
-
-procedure Tf_detail_inscrit.affi_commune (num : string);
+procedure Tf_detail_inscrit.affi_filiere (code : string);
 var
    ch : string;
 begin
@@ -234,9 +193,10 @@ begin
    //if  num = ''
    //then mmo_commune.lines.add('lieu non identifié.')
    //else  begin
-         ch := modele.inscrit_commune(num);
+         //ch := modele.inscrit_commune(code);
          //if  ch = ''	then mmo_commune.lines.add('commune  inconnue.')
          //else  mmo_commune.lines.text := ch;   end;
+
 end;
 
 function  Tf_detail_inscrit.affi_erreur_saisie (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
@@ -268,35 +228,30 @@ begin
    edt_commune.text	:= flux.Get('ville');
    edt_telephone.text	:= flux.Get('telephone');
    edt_portable.text	:= flux.Get('portable');
-   edt_mel.text	:= flux.Get('mel');
+   edt_mel.text	        := flux.Get('mel');
+   cbo_filiere.text	:= flux.Get('filiere');
 
    flux.destroy;
-
-   //affi_vehicule	(edt_adresse.text);
-   //affi_conducteur	(edt_telephone.text);
-   //affi_commune	(edt_nofiliere.text);
 end;
 
 procedure Tf_detail_inscrit.detail (idinf : string);
 begin
    init (idinf, true);    // mode affichage
    pnl_titre.caption	:= 'Détail d''une inscrit';
-   //edt_dt.DateMode	:= dmNone;	// zone date sans liste déroulante
    btn_retour.setFocus;
 end;
 
 procedure Tf_detail_inscrit.edit (idinf : string);
 begin
    init (idinf, false);
-   pnl_titre.caption	:= 'Modification d''une inscrit';
+   pnl_titre.caption	:= 'Modification d''un inscrit';
    edt_num.ReadOnly	 := true;
-   //edt_dt.setFocus;
 end;
 
 procedure Tf_detail_inscrit.add;
 begin
    init ('',false);   // pas de numéro d'inscrit
-   pnl_titre.caption   := 'Nouvelle inscrit';
+   pnl_titre.caption   := 'Nouvel inscrit';
    edt_num.setFocus;
 end;
 
@@ -409,15 +364,15 @@ end;
 procedure Tf_detail_inscrit.edt_adresseExit(Sender: TObject);
 begin
    edt_adresse.text := TRIM(edt_adresse.text);
-   IF   NOT  ( edt_adresse.text = oldvaleur )
-   THEN	affi_vehicule (edt_adresse.text);
+   //IF   NOT  ( edt_adresse.text = oldvaleur )
+   //THEN	affi_vehicule (edt_adresse.text);
 end;
 
 procedure Tf_detail_inscrit.edt_nofiliereExit(Sender: TObject);
 begin
    //edt_nofiliere.text := TRIM(edt_nofiliere.text);
-   //IF   NOT  ( edt_nofiliere.text = oldvaleur )
-   //THEN	affi_commune (edt_nofiliere.text);
+   IF   NOT  ( cbo_filiere.text = oldvaleur )
+   THEN	affi_filiere (cbo_filiere.text);
 end;
 
 procedure Tf_detail_inscrit.edt_numExit(Sender: TObject);
@@ -428,8 +383,8 @@ end;
 procedure Tf_detail_inscrit.edt_telephoneExit(Sender: TObject);
 begin
    edt_telephone.text := TRIM(edt_telephone.text);
-   IF   NOT  ( edt_telephone.text = oldvaleur )
-   THEN	affi_conducteur (edt_telephone.text);
+   //IF   NOT  ( edt_telephone.text = oldvaleur )
+   //THEN	affi_conducteur (edt_telephone.text);
 end;
 
 procedure Tf_detail_inscrit.edt_Enter(Sender : TObject);
