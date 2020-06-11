@@ -39,7 +39,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="8">
       <Unit0>
         <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -80,23 +80,16 @@
         <ResourceBaseClass Value="Form"/>
       </Unit5>
       <Unit6>
-        <Filename Value="u_notes_ajout.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="f_notes_ajout"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit6>
-      <Unit7>
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit7>
-      <Unit8>
+      </Unit6>
+      <Unit7>
         <Filename Value="u_accueil.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="f_accueil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit8>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
