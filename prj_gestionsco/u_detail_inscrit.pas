@@ -155,8 +155,8 @@ begin
      f_notes_list.affi_data(modele.inscrit_notes(id));
      lbl_notes.caption := '  Relevé de Notes - '
                        //+ floattostrF(f_notes_list.SumColumn('note'),FFFixed,7,2) +' €'
-                       + 'Moyenne étudiant : ' + modele.moy_inscrit(id) + ' - '
-                       + 'Moyenne filière : ' + modele.moy_inscrit(cbo_filiere.text)
+                       //+ 'Moyenne étudiant : ' + modele.moy_inscrit(id) + ' - '
+                       //+ 'Moyenne filière : ' + modele.moy_inscrit(cbo_filiere.text)
                        + '  ';
    END
    ELSE

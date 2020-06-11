@@ -84,14 +84,12 @@ end;
 
 function Tmodele.moy_inscrit (num : string) : string;
 begin
-     //result := load('sp_moy_inscrit',[num])
-     result := '-1';
+     load('sp_moy_inscrit',[num], result)
 end;
 
 function Tmodele.moy_filiere (code : string) : string;
 begin
-     //result := load('sp_moy_filiere',[code])
-     result := '-1';
+     load('sp_moy_filiere',[code], result)
 end;
 
 function Tmodele.inscrit_delit_tous : TLoadDataSet;
