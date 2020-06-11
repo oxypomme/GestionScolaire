@@ -22,11 +22,12 @@ Tmodele = class(TMySQL)
    function  inscrit_notes	(num : string) : TLoadDataSet;
    function  inscrit_delit_tous  : TLoadDataSet;
 
+   function moy_inscrit (num : string) : string;
+   function moy_filiere (code : string) : string;
+
    procedure inscrit_delete	(id_inf : string);
    procedure inscrit_insert	(id_inf, date_inf, no_immat, no_permis, no_com : string);
    procedure inscrit_update	(id_inf, date_inf, no_immat, no_permis, no_com : string);
-   procedure inscrit_notes_delete	(id_inf : string);
-   procedure inscrit_notes_insert	(id_inf, id_delit : string);
 
    procedure close;
 end;
@@ -66,7 +67,6 @@ begin
       result := load('sp_inscrit_liste_etu',[no_etu, nom_etu]);
 end;
 
-
 function Tmodele.inscrit_num (num : string) : TLoadDataSet;
 begin
      result := load('sp_inscrit_num',[num]);
@@ -80,6 +80,18 @@ end;
 function Tmodele.inscrit_notes (num : string) : TLoadDataSet;
 begin
      result := load('sp_etudiant_note',[num])
+end;
+
+function Tmodele.moy_inscrit (num : string) : string;
+begin
+     //result := load('sp_moy_inscrit',[num])
+     result := '-1';
+end;
+
+function Tmodele.moy_filiere (code : string) : string;
+begin
+     //result := load('sp_moy_filiere',[code])
+     result := '-1';
 end;
 
 function Tmodele.inscrit_delit_tous : TLoadDataSet;
@@ -100,16 +112,6 @@ end;
 procedure Tmodele.inscrit_update (id_inf, date_inf, no_immat, no_permis, no_com : string);
 begin
      //exec('sp_inscrit_update',[id_inf], [date_inf, no_immat,no_permis, no_com]);
-end;
-
-procedure Tmodele.inscrit_notes_delete (id_inf : string);
-begin
-     //exec('sp_inscrit_notes_delete',[id_inf]);
-end;
-
-procedure Tmodele.inscrit_notes_insert (id_inf, id_delit : string);
-begin
-     //exec('sp_inscrit_notes_insert',[id_inf, id_delit]);
 end;
 
 begin
