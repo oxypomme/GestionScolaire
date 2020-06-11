@@ -25,7 +25,6 @@ type
     edt_nom: TEdit;
     lbl_fillib_court: TLabel;
     lbl_fillib_milong: TLabel;
-    lbl_portable_erreur: TLabel;
     lbl_mel_erreur: TLabel;
     lbl_mel: TLabel;
     lbl_portable: TLabel;
@@ -76,7 +75,7 @@ type
     procedure affi_page;
     procedure all_readonly (bool : boolean);
     procedure lib_filiere_disp;
-    function  affi_erreur_saisie (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
+    function  affi_erreur_saisie (erreur : string; lbl : TLabel; obj : TObject) : boolean;
 
     { private declarations }
   public
@@ -100,8 +99,8 @@ var
    id  : string;	// variable active dans toute l'unité, contenant l'id inscrit affichée
 
 procedure Tf_detail_inscrit.Init   ( idins : string;	affi : boolean);
-//  ajout nouvelle inscrit : id est vide
-// affichage détail d'une inscrit : affi est vrai sinon affi est faux
+//  ajout nouvel inscrit : id est vide
+// affichage détail d'un inscrit : affi est vrai sinon affi est faux
 begin
    style.panel_travail (pnl_titre);
    style.panel_travail (pnl_btn);
@@ -119,7 +118,6 @@ begin
    style.panel_travail (pnl_contact);
 	style.label_titre  (lbl_contact);
 	style.label_erreur (lbl_telephone_erreur);  lbl_telephone_erreur.caption := '';
-        style.label_erreur (lbl_portable_erreur);   lbl_portable_erreur.caption := '';
         style.label_erreur (lbl_mel_erreur);        lbl_mel_erreur.caption := '';
    style.panel_travail (pnl_filiere);
 	style.label_titre  (lbl_filiere);
@@ -132,7 +130,7 @@ begin
 		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := '';
 	style.panel_travail (pnl_notes_list);
 	style.panel_travail (pnl_notes_ajout);
-   edt_num.ReadOnly	:=affi;
+   edt_num.ReadOnly	:= affi;
 
 // initialisation véhicule
 //   lbl_adresse_erreur.caption	:='';
@@ -183,12 +181,12 @@ begin
 
 end;
 
-function  Tf_detail_inscrit.affi_erreur_saisie (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
+function  Tf_detail_inscrit.affi_erreur_saisie (erreur : string; lbl : TLabel; obj : TObject) : boolean;
 begin
    lbl.caption := erreur;
    if  NOT (erreur = '')
    then begin
-	edt.setFocus;
+	TEdit(obj).setFocus;
 	result := false;
    end
    else result := true;
@@ -301,83 +299,59 @@ var
 begin
     valide := true;
 
-    erreur := '';
-    if  f_notes_list.sg_liste.RowCount = 0
-    then  begin
-          erreur := 'L''notes doit être renseignée.';
-          valide := false;
-    end;
-    lbl_notes_erreur.caption := erreur;
+    //erreur := '';
+    //if  f_notes_list.sg_liste.RowCount = 0
+    //then  begin
+    //      erreur := 'L''notes doit être renseignée.';
+    //      valide := false;
+    //end;
+    //lbl_notes_erreur.caption := erreur;
 
     erreur := '';
-    //saisie := edt_nofiliere.text;
-    if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
-    else  begin
-             //ch := modele.inscrit_commune(saisie);
-	  if  ch = ''  then erreur := 'numéro inexistant.';
-    end;
-    //valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_nofiliere)  AND  valide;
+    saisie := edt_num.text;
+    if  saisie = ''  then  erreur := 'Le numéro doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_adresse)  AND  valide;
+
 
     erreur := '';
-    saisie := edt_telephone.text;
-    if  NOT (saisie = '')
-    then  begin
-             //ch  := modele.inscrit_conducteur(saisie);
-             if  ch = ''  then  erreur := 'numéro inexistant.';
-    end;
-    valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
+    saisie := cbo_filiere.text;
+    if  saisie = ''  then  erreur := 'Le numéro doit être rempli.';
 
-    erreur := '';
-    saisie := edt_adresse.text;
-    if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
-    else  begin
-             //ch := modele.inscrit_vehicule(saisie);
-	  if  ch = ''  then erreur := 'numéro inexistant.';
-    end;
-    valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
+    valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, cbo_filiere)  AND  valide;
 
-    erreur := '';
-    saisie := edt_adresse.text;
-    if  saisie = ''  then  erreur := 'Le numéro doit être rempli.'
-    else  begin
-             //ch := modele.inscrit_vehicule(saisie);
-	  if  ch = ''  then erreur := 'numéro inexistant.';
-    end;
-    valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
-
-    if  id = ''
-    then begin
-	 erreur := '';
-	 saisie := edt_num.text;
-	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
-	 else begin
+ //   if  id = ''
+  //  then begin
+//	 erreur := '';
+//	 saisie := edt_num.text;
+//	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
+//	 else begin
 	      //flux := modele.inscrit_liste_num(saisie);
 	      //if  NOT  flux.endOf
 	      //then  erreur := 'Le numéro existe déjà';
-	 end;
-	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
-    end;
-       if  NOT  valide
-    then  messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
-    else  begin
+//	 end;
+//	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
+   // end;
+   //    if  NOT  valide
+   // then  messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
+   // else  begin
           //if  id =''
 	  //then  modele.inscrit_insert(edt_num.text, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text)
 	  //else  begin
 	//	modele.inscrit_update(id, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text);
 	     // suppression de la composition de l'notes
-		modele.inscrit_notes_delete (edt_num.text);
+//		modele.inscrit_notes_delete (edt_num.text);
 	  //end;
 
-          i := 1;   // commence à 1 pour passer la ligne de titres des colonnes en ligne 0
-   	  while  ( i  <  f_notes_list.sg_liste.RowCount )
-   	  do  begin
-              modele.inscrit_notes_insert (edt_num.text, f_notes_list.sg_liste.Cells[0,i]);
-              i := i +1;
-          end;
+    //      i := 1;   // commence à 1 pour passer la ligne de titres des colonnes en ligne 0
+   //	  while  ( i  <  f_notes_list.sg_liste.RowCount )
+   //	  do  begin
+    //          modele.inscrit_notes_insert (edt_num.text, f_notes_list.sg_liste.Cells[0,i]);
+    //          i := i +1;
+    //      end;
    	  //if id='' then f_list_inscrit.line_add(modele.inscrit_liste_num(edt_num.text))
    	  //else f_list_inscrit.line_edit(modele.inscrit_liste_num(id));
-   	  close;
-    end;
+   //	  close;
+    //end;
 end;
 
 procedure Tf_detail_inscrit.cbo_filiereChange(Sender: TObject);
@@ -399,7 +373,7 @@ begin
      end
      ELSE
      begin
-       lbl_fillib_court.caption	 := '';
+       lbl_fillib_court.caption	 := 'Filière non identifiée';
        lbl_fillib_milong.caption := '';
      end;
 end;

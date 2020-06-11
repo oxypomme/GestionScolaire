@@ -174,21 +174,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         Caption = 'Mel'
         ParentColor = False
       end
-      object lbl_portable_erreur: TLabel
-        Left = 184
-        Height = 15
-        Top = 64
-        Width = 108
-        Caption = 'lbl_portable_erreur'
-        Font.CharSet = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -13
-        Font.Name = 'Calibri'
-        Font.Pitch = fpVariable
-        Font.Quality = fqDraft
-        ParentColor = False
-        ParentFont = False
-      end
       object lbl_mel_erreur: TLabel
         Left = 344
         Height = 15
