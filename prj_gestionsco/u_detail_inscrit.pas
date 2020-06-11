@@ -152,8 +152,11 @@ begin
      lbl_notes.autosize := true;
      f_notes_list.init;
      f_notes_list.show;
-     //f_notes_list.affi_data(modele.inscrit_notes(idins));
-     f_notes_list.affi_total(lbl_notes);
+     f_notes_list.affi_data(modele.inscrit_notes(id));
+     lbl_notes.caption := '  Relevé de Notes : '
+                       //+ floattostrF(f_notes_list.SumColumn('note'),FFFixed,7,2) +' €'
+
+                       + '  ';
    END
    ELSE
    BEGIN

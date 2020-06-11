@@ -79,7 +79,7 @@ end;
 
 function Tmodele.inscrit_notes (num : string) : TLoadDataSet;
 begin
-     //result := load('sp_inscrit_notes',[num]);
+     result := load('sp_etudiant_note',[num])
 end;
 
 function Tmodele.inscrit_delit_tous : TLoadDataSet;

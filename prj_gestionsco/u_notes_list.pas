@@ -14,7 +14,6 @@ type
 
   Tf_notes_list = class(TF_liste)
     procedure Init;
-    procedure affi_total (lbl : TLabel);
   private
     { private declarations }
   public
@@ -44,10 +43,6 @@ begin
    pnl_btn_ligne.Hide;
 end;
 
-procedure  Tf_notes_list.affi_total (lbl : TLabel);
-begin
-   lbl.caption := '  Relevé de Notes : ' + floattostrF(f_notes_list.SumColumn('tarif'),FFFixed,7,2) +' €' + '  ';
-end;
 
 end.
 
