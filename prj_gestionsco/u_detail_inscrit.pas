@@ -90,7 +90,7 @@ implementation
 
 {$R *.lfm}
 
-uses	u_feuille_style, u_list_inscrit, u_notes_list, u_notes_ajout, u_modele, u_loaddataset;
+uses	u_feuille_style, u_list_inscrit, u_notes_list, u_modele, u_loaddataset;
 
 { Tf_detail_inscrit }
 
@@ -153,12 +153,13 @@ begin
      f_notes_list.init;
      f_notes_list.show;
      //f_notes_list.affi_data(modele.inscrit_notes(idins));
-     f_notes_list.affi_total;
+     f_notes_list.affi_total(lbl_notes);
    END
    ELSE
    BEGIN
      lbl_notes.autosize := false;
      lbl_notes.width := 140;
+     lbl_notes.Caption := '  Relevé de Notes';
    end;
 
 end;

@@ -4,45 +4,16 @@ inherited f_notes_list: Tf_notes_list
   Top = 312
   Width = 392
   Caption = 'f_notes_list'
-  ClientHeight = 270
-  ClientWidth = 392
+  ClientHeight = 0
+  ClientWidth = 0
   inherited pnl_titre: TPanel
     Height = 26
-    Width = 392
-    ClientHeight = 26
-    ClientWidth = 392
-    object lbl_notes_total: TLabel[0]
-      Left = 117
-      Height = 26
-      Top = 0
-      Width = 70
-      Align = alLeft
-      AutoSize = False
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Calibri'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Layout = tlCenter
-      ParentColor = False
-      ParentFont = False
-    end
-    object lbl_titre: TLabel[1]
-      Left = 0
-      Height = 26
-      Top = 0
-      Width = 117
-      Align = alLeft
-      Caption = 'Délits constatés : '
-      Layout = tlCenter
-      ParentColor = False
-    end
+    Width = 0
   end
   inherited pnl_btn: TPanel
-    Top = 236
-    Width = 392
-    ClientWidth = 392
+    Top = -34
+    Width = 0
+    ClientWidth = 0
     inherited pnl_btn_page: TPanel
       Width = 240
       ClientWidth = 240
@@ -60,36 +31,36 @@ inherited f_notes_list: Tf_notes_list
       end
     end
     inherited pnl_btn_ligne: TPanel
-      Left = 240
-      Width = 152
-      ClientWidth = 152
+      Left = 0
+      Width = 0
+      ClientWidth = 0
       inherited btn_line_detail: TSpeedButton
-        Left = -10
+        Left = -41
         Hint = 'détail du délit'
       end
       inherited btn_line_add: TSpeedButton
-        Left = 31
+        Left = -39
         Hint = 'ajouter un délit'
       end
       inherited btn_line_delete: TSpeedButton
-        Left = 110
+        Left = -42
         Hint = 'supprimer le délit'
       end
       inherited btn_line_edit: TSpeedButton
-        Left = 70
+        Left = -40
         Hint = 'modifier le délit'
       end
     end
   end
   inherited pnl_affi: TPanel
-    Height = 210
-    Top = 26
-    Width = 392
-    ClientHeight = 210
-    ClientWidth = 392
+    Height = 0
+    Top = 0
+    Width = 0
+    ClientHeight = 0
+    ClientWidth = 0
     inherited sg_liste: TStringGrid
-      Height = 210
-      Width = 392
+      Height = 0
+      Width = 0
       ColCount = 3
       Columns = <      
         item
