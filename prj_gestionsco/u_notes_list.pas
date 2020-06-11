@@ -46,7 +46,7 @@ end;
 
 procedure  Tf_notes_list.affi_total (lbl : TLabel);
 begin
-   lbl.caption := '  Relevé de Notes : ' +floattostrF(f_notes_list.SumColumn('tarif'),FFFixed,7,2) +' €' + '  ';
+   lbl.caption := '  Relevé de Notes : ' + floattostrF(f_notes_list.SumColumn('tarif'),FFFixed,7,2) +' €' + '  ';
 end;
 
 end.
