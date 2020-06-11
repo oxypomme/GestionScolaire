@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2495
+  Left = 821
   Height = 701
-  Top = 165
+  Top = 200
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 701
@@ -273,7 +273,7 @@ object f_detail_inscrit: Tf_detail_inscrit
         ParentFont = False
       end
       object lbl_commune_erreur: TLabel
-        Left = 192
+        Left = 248
         Height = 15
         Top = 88
         Width = 114
