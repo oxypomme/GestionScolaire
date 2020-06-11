@@ -355,9 +355,9 @@ begin
 	 saisie := edt_num.text;
 	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
 	 else begin
-	      //flux := modele.inscrit_liste_num(saisie);
-	      //if  NOT  flux.endOf
-	      //then  erreur := 'Le numéro existe déjà';
+	      flux := modele.inscrit_liste_etu(saisie, '');
+	      if  NOT  flux.endOf
+	      then  erreur := 'Le numéro existe déjà';
 	 end;
 	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
     end;

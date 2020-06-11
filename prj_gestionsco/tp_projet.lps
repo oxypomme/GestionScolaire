@@ -9,7 +9,7 @@
         <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="43" Y="23"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,7 +21,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="48"/>
         <CursorPos X="36" Y="69"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -32,9 +32,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="35"/>
-        <CursorPos X="49" Y="74"/>
-        <UsageCount Value="39"/>
+        <TopLine Value="52"/>
+        <CursorPos X="91" Y="77"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -47,7 +47,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="24"/>
         <CursorPos X="44" Y="56"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -59,9 +59,9 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
-        <TopLine Value="311"/>
-        <CursorPos X="66" Y="337"/>
-        <UsageCount Value="39"/>
+        <TopLine Value="331"/>
+        <CursorPos X="58" Y="358"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -71,7 +71,7 @@
         <ComponentName Value="f_notes_list"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
       </Unit5>
       <Unit6>
         <Filename Value="u_notes_ajout.pas"/>
@@ -82,7 +82,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="20"/>
         <CursorPos X="15" Y="63"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
@@ -90,9 +90,9 @@
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="9"/>
-        <TopLine Value="54"/>
+        <TopLine Value="31"/>
         <CursorPos X="6" Y="92"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -104,7 +104,7 @@
         <EditorIndex Value="8"/>
         <CursorPos X="3" Y="35"/>
         <ComponentState Value="1"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit8>
