@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 821
+  Left = 927
   Height = 701
-  Top = 200
+  Top = 219
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 701
@@ -565,7 +565,7 @@ object f_detail_inscrit: Tf_detail_inscrit
           ParentFont = False
         end
       end
-      object pnl_notes_ajout: TPanel
+      object pnl_notes_vide: TPanel
         Left = 407
         Height = 206
         Top = 22

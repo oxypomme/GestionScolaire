@@ -40,7 +40,7 @@ type
     lbl_num_erreur: TLabel;
     lbl_notes: TLabel;
     lbl_adresse_erreur: TLabel;
-    pnl_notes_ajout: TPanel;
+    pnl_notes_vide: TPanel;
     pnl_notes_list: TPanel;
     pnl_notes: TPanel;
     lbl_filiere: TLabel;
@@ -129,55 +129,37 @@ begin
 		style.label_titre  (lbl_notes);
 		style.label_erreur (lbl_notes_erreur);     lbl_notes_erreur.caption := '';
 	style.panel_travail (pnl_notes_list);
-	style.panel_travail (pnl_notes_ajout);
+	style.panel_travail (pnl_notes_vide);
    edt_num.ReadOnly	:= affi;
-
-// initialisation véhicule
-//   lbl_adresse_erreur.caption	:='';
-//   edt_adresse.clear;
-//   edt_adresse.ReadOnly	:=affi;
-   //mmo_vehicule.clear;
-   //mmo_vehicule.ReadOnly	:=true;
-//   lbl_contact.visible	:=false;   // invisible par défaut
-   //mmo_proprio.clear;
-   //mmo_proprio.ReadOnly	:=true;
-// initialisation conducteur
- //  lbl_telephone_erreur.caption	:='';
-  // edt_telephone.clear;
-//   edt_telephone.ReadOnly		:=affi;
-   //mmo_conducteur.clear;
-   //mmo_conducteur.ReadOnly :=true;
-// initialisation commune
-//   lbl_filiere_erreur.caption	:='';
-   //edt_nofiliere.clear;
-   //edt_nofiliere.ReadOnly		:=affi;
-   //mmo_commune.clear;
-   //mmo_commune.ReadOnly	:=true;
 
    btn_retour.visible	:=affi;  // visible quand affichage détail
    btn_valider.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
    btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification inscrit
 
-// initialisation notes
-//   lbl_notes_erreur.Caption  :='';
-
-//   f_notes_list.borderstyle  := bsNone;
-//   f_notes_list.parent	      := pnl_notes_list;
- //  f_notes_list.align	      := alClient;
-//   f_notes_list.init(affi);
-//   f_notes_list.show;
-//   f_notes_list.affi_data(modele.inscrit_notes(idinf));
-//   f_notes_list.affi_total;
-
-//   f_notes_ajout.borderstyle := bsNone;
-//   f_notes_ajout.parent      := pnl_notes_ajout;
-//   f_notes_ajout.align	      := alClient;
 
    show;
 
    id  := idins;
    IF  NOT  ( id = '')   // affichage/modification inscrit
-   THEN  affi_page;
+   THEN
+   BEGIN
+     affi_page;
+     lbl_notes_erreur.Caption  :='';
+
+     f_notes_list.borderstyle  := bsNone;
+     f_notes_list.parent       := pnl_notes_list;
+     f_notes_list.align	       := alClient;
+     lbl_notes.autosize := true;
+     f_notes_list.init;
+     f_notes_list.show;
+     //f_notes_list.affi_data(modele.inscrit_notes(idins));
+     f_notes_list.affi_total;
+   END
+   ELSE
+   BEGIN
+     lbl_notes.autosize := false;
+     lbl_notes.width := 140;
+   end;
 
 end;
 

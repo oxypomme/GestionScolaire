@@ -70,12 +70,10 @@ inherited f_notes_list: Tf_notes_list
       inherited btn_line_add: TSpeedButton
         Left = 31
         Hint = 'ajouter un délit'
-        OnClick = btn_line_addClick
       end
       inherited btn_line_delete: TSpeedButton
         Left = 110
         Hint = 'supprimer le délit'
-        OnClick = btn_line_deleteClick
       end
       inherited btn_line_edit: TSpeedButton
         Left = 70
