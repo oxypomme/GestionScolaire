@@ -299,14 +299,6 @@ var
 begin
     valide := true;
 
-    //erreur := '';
-    //if  f_notes_list.sg_liste.RowCount = 0
-    //then  begin
-    //      erreur := 'L''notes doit être renseignée.';
-    //      valide := false;
-    //end;
-    //lbl_notes_erreur.caption := erreur;
-
     erreur := '';
     saisie := edt_nom.text;
     if  saisie = ''  then  erreur := 'Le nom doit être rempli.';
@@ -361,6 +353,8 @@ begin
 	 end;
 	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
     end;
+
+
    //    if  NOT  valide
    // then  messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
    // else  begin
