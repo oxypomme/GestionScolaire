@@ -65,16 +65,17 @@ type
     procedure btn_retourClick(Sender: TObject);
     procedure btn_validerClick(Sender: TObject);
     procedure cbo_filiereChange(Sender: TObject);
-    procedure init   ( idinf : string; affi : boolean);
-    procedure detail ( idinf : string);
-    procedure edit   ( idinf : string);
+    procedure init   ( idins : string; affi : boolean);
+    procedure detail ( idins : string);
+    procedure edit   ( idins : string);
     procedure add;
-    procedure delete ( idinf : string);
+    procedure delete ( idins : string);
     procedure edt_Enter (Sender : TObject );
 
   private
     procedure affi_page;
-    procedure affi_filiere       (code : string);
+    procedure all_readonly (bool : boolean);
+    procedure lib_filiere_disp;
     function  affi_erreur_saisie (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
 
     { private declarations }
@@ -98,7 +99,7 @@ var
    oldvaleur : string;	// utilisée dans la modification pour comparer l’ancienne valeur avec la saisie
    id  : string;	// variable active dans toute l'unité, contenant l'id inscrit affichée
 
-procedure Tf_detail_inscrit.Init   ( idinf : string;	affi : boolean);
+procedure Tf_detail_inscrit.Init   ( idins : string;	affi : boolean);
 //  ajout nouvelle inscrit : id est vide
 // affichage détail d'une inscrit : affi est vrai sinon affi est faux
 begin
@@ -176,23 +177,9 @@ begin
 
    show;
 
-   id  := idinf;
+   id  := idins;
    IF  NOT  ( id = '')   // affichage/modification inscrit
    THEN  affi_page;
-
-end;
-
-procedure Tf_detail_inscrit.affi_filiere (code : string);
-var
-   ch : string;
-begin
-   //mmo_commune.clear;
-   //if  num = ''
-   //then mmo_commune.lines.add('lieu non identifié.')
-   //else  begin
-         //ch := modele.inscrit_commune(code);
-         //if  ch = ''	then mmo_commune.lines.add('commune  inconnue.')
-         //else  mmo_commune.lines.text := ch;   end;
 
 end;
 
@@ -205,6 +192,18 @@ begin
 	result := false;
    end
    else result := true;
+end;
+
+procedure Tf_detail_inscrit.all_readonly (bool : boolean);
+begin
+   edt_nom.readonly := bool;
+   edt_prenom.readonly := bool;
+   edt_adresse.readonly := bool;
+   edt_codepostal.readonly := bool;
+   edt_commune.readonly := bool;
+   edt_telephone.readonly := bool;
+   edt_portable.readonly := bool;
+   edt_mel.readonly := bool;
 end;
 
 procedure Tf_detail_inscrit.affi_page;
@@ -227,23 +226,27 @@ begin
    edt_portable.text	:= flux.Get('portable');
    edt_mel.text	        := flux.Get('mel');
    cbo_filiere.text	:= flux.Get('filiere');
+   lib_filiere_disp;
 
    flux.destroy;
 end;
 
-procedure Tf_detail_inscrit.detail (idinf : string);
+procedure Tf_detail_inscrit.detail (idins : string);
 begin
-   init (idinf, true);    // mode affichage
+   init (idins, true);    // mode affichage
    pnl_titre.caption	:= 'Détail d''une inscrit';
+   all_readonly(true);
    edt_num.enabled	 := true;
    cbo_civilite.enabled	 := false;
    cbo_filiere.enabled   := false;
+   lib_filiere_disp;
    btn_retour.setFocus;
 end;
 
-procedure Tf_detail_inscrit.edit (idinf : string);
+procedure Tf_detail_inscrit.edit (idins : string);
 begin
-   init (idinf, false);
+   init (idins, false);
+   all_readonly(false);
    pnl_titre.caption	 := 'Modification d''un inscrit';
    edt_num.enabled	 := false;
    cbo_civilite.enabled	 := true;
@@ -253,6 +256,7 @@ end;
 procedure Tf_detail_inscrit.add;
 begin
    init ('',false);   // pas de numéro d'inscrit
+   all_readonly(false);
    pnl_titre.caption   := 'Nouvel inscription';
    edt_num.text	        := '';
    edt_nom.text 	:= '';
@@ -266,17 +270,18 @@ begin
    edt_num.enabled	 := true;
    cbo_civilite.enabled	 := true;      cbo_civilite.itemindex := 0;
    cbo_filiere.enabled   := true;      cbo_filiere.itemindex := -1;
+   lib_filiere_disp;
    edt_num.setFocus;
 end;
 
-procedure Tf_detail_inscrit.delete (idinf : string);
+procedure Tf_detail_inscrit.delete (idins : string);
 begin
    IF   messagedlg ('Demande de confirmation'
-	,'Confirmez-vous la suppression de l''inscrit n°' +idinf
+	,'Confirmez-vous la suppression de l''inscrit n°' + idins
 	,mtConfirmation, [mbYes,mbNo], 0, mbNo) = mrYes
    THEN BEGIN
-	modele.inscrit_notes_delete (idinf);
-	modele.inscrit_delete (idinf);
+	//modele.inscrit_notes_delete (idins);
+	modele.inscrit_delete (idins);
 
         f_list_inscrit.line_delete;
    END;
@@ -376,20 +381,34 @@ begin
 end;
 
 procedure Tf_detail_inscrit.cbo_filiereChange(Sender: TObject);
+begin
+  lib_filiere_disp;
+end;
+
+procedure Tf_detail_inscrit.lib_filiere_disp();
 var
    flux : Tloaddataset;
 begin
+     if NOT (cbo_filiere.Text = '') THEN
+     begin
      flux := modele.filiere_code(cbo_filiere.Text);
      flux.read;
        lbl_fillib_court.caption	 := flux.Get('lib_court');
        lbl_fillib_milong.caption := flux.Get('lib_milong');
      flux.destroy;
+     end
+     ELSE
+     begin
+       lbl_fillib_court.caption	 := '';
+       lbl_fillib_milong.caption := '';
+     end;
 end;
 
 procedure Tf_detail_inscrit.edt_Enter(Sender : TObject);
 begin
    oldvaleur := TEdit(Sender).text;
 end;
+
 
 end.
 

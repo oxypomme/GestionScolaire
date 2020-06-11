@@ -74,7 +74,6 @@ end;
 
 function Tmodele.filiere_code (code : string) : TLoadDataSet;
 begin
-     //load('sp_filiere_code',[code], result);
      result := load('sp_filiere_code', [code]);
 end;
 
@@ -90,7 +89,7 @@ end;
 
 procedure Tmodele.inscrit_delete (id_inf : string);
 begin
-     //exec('sp_inscrit_delete',[id_inf]);
+     exec('sp_inscrit_delete',[id_inf]);
 end;
 
 procedure Tmodele.inscrit_insert (id_inf, date_inf, no_immat, no_permis, no_com : string);
