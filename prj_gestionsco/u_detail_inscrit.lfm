@@ -1,9 +1,9 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 2465
+  Left = 2495
   Height = 701
-  Top = 239
+  Top = 165
   Width = 920
-  Caption = 'f_detail_infraction'
+  Caption = 'f_detail_inscrit'
   ClientHeight = 701
   ClientWidth = 920
   Font.CharSet = ANSI_CHARSET
@@ -18,7 +18,7 @@ object f_detail_inscrit: Tf_detail_inscrit
     Top = 0
     Width = 920
     Align = alTop
-    Caption = 'Détail d''une infraction'
+    Caption = 'Détail d''un inscrit'
     TabOrder = 0
   end
   object pnl_btn: TPanel
@@ -492,7 +492,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 19
         Width = 115
         ItemHeight = 18
-        ItemIndex = 0
         Items.Strings = (
           '302-5KTMJ1'
           '302-5KTMI7'
@@ -500,7 +499,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         OnChange = cbo_filiereChange
         Style = csDropDownList
         TabOrder = 0
-        Text = '302-5KTMJ1'
       end
       object lbl_fillib_court: TLabel
         Left = 186

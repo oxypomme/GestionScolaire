@@ -264,8 +264,8 @@ begin
    edt_portable.text	:= '';
    edt_mel.text	        := '';
    edt_num.enabled	 := true;
-   cbo_civilite.enabled	 := true;
-   cbo_filiere.enabled   := true;
+   cbo_civilite.enabled	 := true;      cbo_civilite.itemindex := 0;
+   cbo_filiere.enabled   := true;      cbo_filiere.itemindex := -1;
    edt_num.setFocus;
 end;
 
