@@ -145,7 +145,7 @@ begin
    BEGIN
      affi_page;
      lbl_notes_erreur.Caption  :='';
-
+     pnl_notes_list.show;
      f_notes_list.borderstyle  := bsNone;
      f_notes_list.parent       := pnl_notes_list;
      f_notes_list.align	       := alClient;
@@ -160,6 +160,7 @@ begin
    END
    ELSE
    BEGIN
+     pnl_notes_list.hide;
      lbl_notes.autosize := false;
      lbl_notes.width := 140;
      lbl_notes.Caption := '  Relevé de Notes';
@@ -341,27 +342,20 @@ begin
     end;
 
 
-   //    if  NOT  valide
-   // then  messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
-   // else  begin
-          //if  id =''
-	  //then  modele.inscrit_insert(edt_num.text, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text)
-	  //else  begin
-	//	modele.inscrit_update(id, datetostr(edt_dt.date), edt_adresse.text, edt_telephone.text, edt_nofiliere.text);
-	     // suppression de la composition de l'notes
-//		modele.inscrit_notes_delete (edt_num.text);
-	  //end;
-
-    //      i := 1;   // commence à 1 pour passer la ligne de titres des colonnes en ligne 0
-   //	  while  ( i  <  f_notes_list.sg_liste.RowCount )
-   //	  do  begin
-    //          modele.inscrit_notes_insert (edt_num.text, f_notes_list.sg_liste.Cells[0,i]);
-    //          i := i +1;
-    //      end;
-   	  //if id='' then f_list_inscrit.line_add(modele.inscrit_liste_num(edt_num.text))
-   	  //else f_list_inscrit.line_edit(modele.inscrit_liste_num(id));
-   //	  close;
-    //end;
+    if  NOT  valide then
+        messagedlg ('Erreur enregistrement inscrit', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
+    else  begin
+          if  id = '' then
+              modele.inscrit_insert(edt_num.text, cbo_civilite.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_codepostal.text, edt_commune.text, edt_portable.text, edt_telephone.text, edt_mel.text, cbo_filiere.text)
+	  else  begin
+	      modele.inscrit_update(id, cbo_civilite.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_codepostal.text, edt_commune.text, edt_portable.text, edt_telephone.text, edt_mel.text, cbo_filiere.text);
+	  end;
+   	  if id = '' then
+              f_list_inscrit.line_add(modele.inscrit_liste_etu(edt_num.text, ''))
+   	  else
+              f_list_inscrit.line_edit(modele.inscrit_liste_etu(id, ''));
+   	  close;
+    end;
 end;
 
 procedure Tf_detail_inscrit.cbo_filiereChange(Sender: TObject);

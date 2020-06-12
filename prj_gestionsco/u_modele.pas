@@ -25,9 +25,9 @@ Tmodele = class(TMySQL)
    function moy_filiere (code : string) : string;
 
    procedure inscrit_note_delete (id_ins : string);
-   procedure inscrit_delete	(id_ins : string);
-   procedure inscrit_insert	(id_inf, date_inf, no_immat, no_permis, no_com : string);
-   procedure inscrit_update	(id_inf, date_inf, no_immat, no_permis, no_com : string);
+   procedure inscrit_delete	 (id_ins : string);
+   procedure inscrit_insert      (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
+   procedure inscrit_update      (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
 
    procedure close;
 end;
@@ -101,14 +101,14 @@ begin
      exec('sp_inscrit_delete',[id_ins]);
 end;
 
-procedure Tmodele.inscrit_insert (id_inf, date_inf, no_immat, no_permis, no_com : string);
+procedure Tmodele.inscrit_insert (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
 begin
-     //exec('sp_inscrit_insert',[id_inf, date_inf, no_immat, no_permis, no_com]);
+     exec('sp_etudiant_insert',[id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code]);
 end;
 
-procedure Tmodele.inscrit_update (id_inf, date_inf, no_immat, no_permis, no_com : string);
+procedure Tmodele.inscrit_update (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
 begin
-     //exec('sp_inscrit_update',[id_inf], [date_inf, no_immat,no_permis, no_com]);
+     exec('sp_etudiant_update',[id_ins], [civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code]);
 end;
 
 begin
