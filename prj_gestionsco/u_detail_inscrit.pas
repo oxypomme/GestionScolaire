@@ -154,8 +154,8 @@ begin
      f_notes_list.show;
      f_notes_list.affi_data(modele.inscrit_notes(id));
      lbl_notes.caption := '  Relevé de Notes - '
-                       //+ 'Moyenne étudiant : ' + modele.moy_inscrit(id) + ' - '
-                       //+ 'Moyenne filière : ' + modele.moy_inscrit(cbo_filiere.text)
+                       + 'Moyenne étudiant : ' + modele.moy_inscrit(id) + ' - '
+                       + 'Moyenne filière : ' + modele.moy_filiere(cbo_filiere.text)
                        + '  ';
    END
    ELSE
@@ -264,7 +264,7 @@ begin
 	,'Confirmez-vous la suppression de l''inscrit n°' + idins
 	,mtConfirmation, [mbYes,mbNo], 0, mbNo) = mrYes
    THEN BEGIN
-	//modele.inscrit_notes_delete (idins);
+	modele.inscrit_note_delete (idins);
 	modele.inscrit_delete (idins);
 
         f_list_inscrit.line_delete;
