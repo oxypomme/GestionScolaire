@@ -348,7 +348,7 @@ begin
           if  id = '' then
               modele.inscrit_insert(edt_num.text, cbo_civilite.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_codepostal.text, edt_commune.text, edt_portable.text, edt_telephone.text, edt_mel.text, cbo_filiere.text)
 	  else  begin
-	      modele.inscrit_update(id, cbo_civilite.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_codepostal.text, edt_commune.text, edt_portable.text, edt_telephone.text, edt_mel.text, cbo_filiere.text);
+	      modele.inscrit_update(id, cbo_civilite.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_codepostal.text, edt_commune.text, edt_portable.text, edt_telephone.text, edt_mel.text);
 	  end;
    	  if id = '' then
               f_list_inscrit.line_add(modele.inscrit_liste_etu(edt_num.text, ''))

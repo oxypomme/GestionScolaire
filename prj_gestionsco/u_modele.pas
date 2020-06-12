@@ -27,7 +27,7 @@ Tmodele = class(TMySQL)
    procedure inscrit_note_delete (id_ins : string);
    procedure inscrit_delete	 (id_ins : string);
    procedure inscrit_insert      (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
-   procedure inscrit_update      (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
+   procedure inscrit_update      (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel : string);
 
    procedure close;
 end;
@@ -106,9 +106,9 @@ begin
      exec('sp_etudiant_insert',[id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code]);
 end;
 
-procedure Tmodele.inscrit_update (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code : string);
+procedure Tmodele.inscrit_update (id_ins, civ, nom, prenom, adresse, cp, ville, portable, tel, mel : string);
 begin
-     exec('sp_etudiant_update',[id_ins], [civ, nom, prenom, adresse, cp, ville, portable, tel, mel, code]);
+     exec('sp_etudiant_update',[id_ins], [civ, nom, prenom, adresse, cp, ville, portable, tel, mel]);
 end;
 
 begin

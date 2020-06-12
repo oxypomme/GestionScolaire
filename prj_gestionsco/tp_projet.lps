@@ -9,7 +9,7 @@
         <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="43" Y="23"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,7 +21,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="48"/>
         <CursorPos X="36" Y="69"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,7 +34,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="52"/>
         <CursorPos X="60" Y="96"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -47,7 +47,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="24"/>
         <CursorPos X="44" Y="56"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -57,10 +57,11 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="334"/>
-        <CursorPos X="86" Y="378"/>
-        <UsageCount Value="46"/>
+        <TopLine Value="95"/>
+        <CursorPos X="29" Y="136"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -73,18 +74,17 @@
         <EditorIndex Value="6"/>
         <TopLine Value="3"/>
         <CursorPos X="78" Y="34"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <TopLine Value="75"/>
-        <CursorPos X="6" Y="111"/>
-        <UsageCount Value="46"/>
+        <CursorPos X="99" Y="30"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -95,7 +95,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="8"/>
         <CursorPos X="3" Y="35"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
@@ -170,8 +170,8 @@
       <Unit17>
         <Filename Value="u_feuille_style.pas"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="76"/>
-        <CursorPos X="30" Y="82"/>
+        <TopLine Value="68"/>
+        <CursorPos X="43" Y="99"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit17>
