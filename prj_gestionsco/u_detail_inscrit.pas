@@ -108,6 +108,7 @@ begin
    style.panel_travail (pnl_ident);
 	style.label_titre  (lbl_ident);
         style.label_erreur (lbl_num_erreur);     lbl_num_erreur.caption := '';
+        style.combo (cbo_civilite);
         style.label_erreur (lbl_nom_erreur);     lbl_nom_erreur.caption := '';
         style.label_erreur (lbl_prenom_erreur);  lbl_prenom_erreur.caption := '';
    style.panel_travail (pnl_adresse);
@@ -121,6 +122,7 @@ begin
         style.label_erreur (lbl_mel_erreur);        lbl_mel_erreur.caption := '';
    style.panel_travail (pnl_filiere);
 	style.label_titre  (lbl_filiere);
+        style.combo (cbo_filiere);
 	style.label_erreur (lbl_filiere_erreur);   lbl_filiere_erreur.caption := '';
         lbl_fillib_court.caption := ' ';
         lbl_fillib_milong.caption := ' ';

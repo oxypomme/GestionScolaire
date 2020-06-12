@@ -21,7 +21,6 @@ type
           procedure label_titre     (lbl  : TLabel);
           procedure label_erreur    (lbl : TLabel);
           procedure combo           (cbo  : TComboBox);
-          procedure memo_info       (mmo : TMemo);
     END;
 
 var
@@ -109,13 +108,6 @@ begin
    cbo.AutoComplete := true;                // auto complétion
 end;
 
-procedure Tfeuille_style.memo_info (mmo : TMemo);
-begin
-   fonte_defaut (mmo);
-   mmo.BorderStyle := bsNone;
-   mmo.ReadOnly    := True;               // non modifiable
-   mmo.TabStop     := False;              // ne reçoit pas le focus lors de l'appui sur la touche tabulation
-end;
 
 end.
 
