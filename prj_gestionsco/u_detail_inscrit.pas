@@ -5,8 +5,8 @@ unit u_detail_inscrit;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, DateTimePicker, Forms, Controls, Graphics,
-  Dialogs, ExtCtrls, StdCtrls, Grids, Buttons;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics,
+  Dialogs, ExtCtrls, StdCtrls, Buttons;
 
 type
 
@@ -282,8 +282,7 @@ end;
 procedure Tf_detail_inscrit.btn_validerClick(Sender: TObject);
 var
     flux : TLoadDataSet;
-    saisie, erreur, ch	 : string;
-    i 	     : integer;
+    saisie, erreur : string;
     valide  : boolean;
 begin
     valide := true;
