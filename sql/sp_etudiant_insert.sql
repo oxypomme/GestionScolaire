@@ -10,7 +10,7 @@ BEGIN
     FROM FILIERE 
     WHERE code LIKE f_code COLLATE latin1_general_cs;
 
-    INSERT INTO ETUDIANT(id, civ, nom, prenom, adresse, cp, ville, portable, tel, mel, id_fil)
+    INSERT INTO ETUDIANT(id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil)
     VALUES (e_id, e_civ, e_nom, e_prenom, e_adresse, e_cp, e_ville, e_portable, e_tel, e_mel, f_id);
     SET erreur := 0;
 END
