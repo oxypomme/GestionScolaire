@@ -9,16 +9,18 @@ BEGIN
     DECLARE tmpId INT;                      /*ID lu par le curseur*/
     DECLARE tmpMoy VARCHAR(5) DEFAULT 0;    /*Moyenne renvoyé par la procédure*/
     DECLARE curs1 CURSOR FOR (              /*Curseur des inscrits de la fillière*/
-        SELECT ETUDIANT.id
-        FROM ETUDIANT
-        JOIN FILIERE ON (ETUDIANT.id_fil = FILIERE.id)
+        SELECT e.id
+        FROM ETUDIANT AS e
+        JOIN FILIERE AS f
+            ON (e.id_fil = f.id)
         WHERE code = f_code
     );
 
     /*On récupère le nombre d'élèves*/
     SELECT COUNT(*) INTO countEleves
-    FROM ETUDIANT
-    JOIN FILIERE ON (ETUDIANT.id_fil = FILIERE.id)
+    FROM ETUDIANT AS e
+    JOIN FILIERE AS f
+        ON (e.id_fil = f.id)
     WHERE code = f_code;
 
     OPEN curs1;
