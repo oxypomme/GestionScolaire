@@ -66,7 +66,7 @@ inherited f_notes_list: Tf_notes_list
         item
           PickList.Strings = (          )
           Title.Caption = 'UE'
-          Width = 270
+          Width = 250
         end      
         item
           PickList.Strings = (          )
@@ -76,12 +76,12 @@ inherited f_notes_list: Tf_notes_list
         item
           PickList.Strings = (          )
           Title.Caption = 'Note'
-          Width = 50
+          Width = 70
         end>
       ColWidths = (
-        270
+        250
         50
-        50
+        70
       )
       Cells = (
         0

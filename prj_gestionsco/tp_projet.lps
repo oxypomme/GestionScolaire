@@ -57,9 +57,10 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <TopLine Value="138"/>
-        <CursorPos X="84" Y="159"/>
+        <CursorPos Y="157"/>
         <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -71,7 +72,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="6"/>
-        <CursorPos X="69" Y="46"/>
+        <TopLine Value="3"/>
+        <CursorPos X="78" Y="34"/>
         <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -79,7 +81,6 @@
       <Unit6>
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <TopLine Value="64"/>
         <CursorPos X="43" Y="92"/>
@@ -180,7 +181,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="197"/>
         <CursorPos X="40" Y="222"/>
         <UsageCount Value="18"/>
         <Loaded Value="True"/>
