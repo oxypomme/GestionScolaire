@@ -8,6 +8,7 @@ BEGIN
  CREATE TABLE resultat AS
     SELECT * 
     FROM vue_comprend_liste
-    WHERE id = e_id;
- SET e_nomtable := 'resultat';
+    WHERE id_etud = e_id
+    ORDER BY lib_court;
+SET e_nomtable := 'resultat';
 END
