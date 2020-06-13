@@ -21,25 +21,25 @@ inherited f_list_inscrit: Tf_list_inscrit
       ClientWidth = 513
       inherited btn_line_detail: TSpeedButton
         Left = 353
-        Hint = 'détail de l''inscrit'
+        Hint = 'Détail d''une inscription'
         Width = 40
         OnClick = btn_line_detailClick
       end
       inherited btn_line_add: TSpeedButton
         Left = 393
-        Hint = 'ajouter une inscrit'
+        Hint = 'Ajouter une inscription'
         Width = 40
         OnClick = btn_line_addClick
       end
       inherited btn_line_delete: TSpeedButton
         Left = 473
-        Hint = 'supprimer l''inscrit'
+        Hint = 'Supprimer une inscription'
         Width = 40
         OnClick = btn_line_deleteClick
       end
       inherited btn_line_edit: TSpeedButton
         Left = 433
-        Hint = 'modifier l''inscrit'
+        Hint = 'Modifier une inscription'
         OnClick = btn_line_editClick
       end
     end

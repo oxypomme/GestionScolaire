@@ -44,6 +44,7 @@
         <ComponentName Value="f_list_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="24"/>
         <CursorPos X="44" Y="56"/>
@@ -57,7 +58,6 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <CursorPos X="30" Y="8"/>
         <UsageCount Value="47"/>
@@ -194,7 +194,7 @@
         <UsageCount Value="10"/>
       </Unit19>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="u_detail_inscrit.pas"/>
         <Caret Line="314" Column="50" TopLine="305"/>
@@ -305,16 +305,12 @@
       </Position27>
       <Position28>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="132" Column="49" TopLine="160"/>
+        <Caret Line="284" Column="25" TopLine="262"/>
       </Position28>
       <Position29>
         <Filename Value="u_detail_inscrit.pas"/>
-        <Caret Line="284" Column="25" TopLine="262"/>
-      </Position29>
-      <Position30>
-        <Filename Value="u_detail_inscrit.pas"/>
         <Caret Line="9" Column="30"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
