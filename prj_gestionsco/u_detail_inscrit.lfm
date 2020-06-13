@@ -205,7 +205,6 @@ object f_detail_inscrit: Tf_detail_inscrit
         Top = 21
         Width = 416
         AutoSize = False
-        CharCase = ecUppercase
         OnEnter = edt_Enter
         TabOrder = 0
       end
