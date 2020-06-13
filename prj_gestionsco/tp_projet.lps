@@ -44,6 +44,7 @@
         <ComponentName Value="f_list_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="24"/>
         <CursorPos X="79" Y="51"/>
@@ -57,7 +58,6 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <CursorPos X="30" Y="8"/>
         <UsageCount Value="47"/>
@@ -73,6 +73,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="3"/>
         <CursorPos X="78" Y="34"/>
+        <ComponentState Value="1"/>
         <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -180,8 +181,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="81"/>
-        <CursorPos X="40" Y="222"/>
+        <TopLine Value="82"/>
+        <CursorPos X="73" Y="119"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

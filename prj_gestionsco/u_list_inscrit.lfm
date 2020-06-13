@@ -27,7 +27,7 @@ inherited f_list_inscrit: Tf_list_inscrit
       end
       inherited btn_line_add: TSpeedButton
         Left = 393
-        Hint = 'Ajouter une inscription'
+        Hint = 'Nouvelle inscription'
         Width = 40
         OnClick = btn_line_addClick
       end
@@ -39,7 +39,7 @@ inherited f_list_inscrit: Tf_list_inscrit
       end
       inherited btn_line_edit: TSpeedButton
         Left = 433
-        Hint = 'Modifier une inscription'
+        Hint = 'Modification une inscription'
         OnClick = btn_line_editClick
       end
     end
