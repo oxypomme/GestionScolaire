@@ -289,43 +289,43 @@ begin
 
     erreur := '';
     saisie := edt_nom.text;
-    if  saisie = ''  then  erreur := 'Le nom doit être rempli.';
+    if  saisie = ''  then  erreur := 'Le nom doit être rempli';
     valide := affi_erreur_saisie (erreur, lbl_nom_erreur, edt_nom)  AND  valide;
 
     erreur := '';
     saisie := edt_prenom.text;
-    if  saisie = ''  then  erreur := 'Le prénom doit être rempli.';
+    if  saisie = ''  then  erreur := 'Le prénom doit être rempli';
     valide := affi_erreur_saisie (erreur, lbl_prenom_erreur, edt_prenom)  AND  valide;
 
     erreur := '';
     saisie := edt_adresse.text;
-    if  saisie = ''  then  erreur := 'L''adresse doit être remplie.';
+    if  saisie = ''  then  erreur := 'L''adresse doit être remplie';
     valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
 
     erreur := '';
     saisie := edt_codepostal.text;
-    if  saisie = ''  then  erreur := 'Le codepostal doit être rempli.';
+    if  saisie = ''  then  erreur := 'Le code postal doit être rempli';
     valide := affi_erreur_saisie (erreur, lbl_codepostal_erreur, edt_codepostal)  AND  valide;
 
     erreur := '';
     saisie := edt_commune.text;
-    if  saisie = ''  then  erreur := 'La commune doit être remplie.';
+    if  saisie = ''  then  erreur := 'La commune doit être remplie';
     valide := affi_erreur_saisie (erreur, lbl_commune_erreur, edt_commune)  AND  valide;
 
     erreur := '';
     saisie := edt_telephone.text + edt_portable.text;
-    if  saisie = ''  then  erreur := 'Le téléphone ou le portable doit être rempli.';
+    if  saisie = ''  then  erreur := 'Le téléphone ou le portable doit être rempli';
     valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
 
     erreur := '';
     saisie := edt_mel.text;
-    if  saisie = ''  then  erreur := 'L''adresse mel doit être remplie.';
+    if  saisie = ''  then  erreur := 'L''adresse mel doit être remplie';
     valide := affi_erreur_saisie (erreur, lbl_mel_erreur, edt_mel)  AND  valide;
 
 
     erreur := '';
     saisie := cbo_filiere.text;
-    if  saisie = ''  then  erreur := 'La filière doit être renseignée.';
+    if  saisie = ''  then  erreur := 'La filière doit être remplie';
 
     valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, cbo_filiere)  AND  valide;
 
@@ -333,7 +333,7 @@ begin
     then begin
 	 erreur := '';
 	 saisie := edt_num.text;
-	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
+	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli'
 	 else begin
 	      flux := modele.inscrit_liste_etu(saisie, '');
 	      if  NOT  flux.endOf

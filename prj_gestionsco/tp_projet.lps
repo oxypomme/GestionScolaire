@@ -44,7 +44,6 @@
         <ComponentName Value="f_list_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="24"/>
         <CursorPos X="79" Y="51"/>
@@ -58,8 +57,10 @@
         <ComponentName Value="f_detail_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <CursorPos X="30" Y="8"/>
+        <TopLine Value="306"/>
+        <CursorPos X="71" Y="336"/>
         <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
