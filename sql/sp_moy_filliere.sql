@@ -34,7 +34,7 @@ BEGIN
         /*On fait la moyenne de l'inscrit*/
         CALL sp_moy_inscrit(tmpId, tmpMoy);
         /*On modifie la somme des moyennes*/
-        SET moy := moy + tmpMoy ;
+        SET moy := moy + REPLACE(tmpMoy,',','.') ;
         /*On passe à l'inscrit suivant*/
         SET i := i + 1;
     END WHILE;
@@ -44,7 +44,7 @@ BEGIN
     /*Si il n'y a pas eu de notes, où qu'elles sont toutes non notées*/
     IF(countEleves <> 0) THEN
         /*On calcule la moyenne*/
-        SET moy := FORMAT(moy / countEleves,2);
+        SET moy := REPLACE(FORMAT(moy / countEleves,2),'.',',');
     ELSE
         /*En cas de problème, la moyenne vaut -1*/
         SET moy := -1;

@@ -43,7 +43,7 @@ BEGIN
     /*Si il n'y a pas eu de notes, où qu'elles sont toutes non notées*/
     IF(sumCoef <> 0) THEN
         /*On calcule la moyenne*/
-        SET moy := FORMAT(moy / sumCoef, 2);
+        SET moy := REPLACE(FORMAT(moy / sumCoef, 2),'.',',');
     ELSE
         /*En cas de problème, la moyenne vaut -1*/
         SET moy := -1;
