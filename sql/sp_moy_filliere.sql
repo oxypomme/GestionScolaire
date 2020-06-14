@@ -44,7 +44,7 @@ BEGIN
     /*Si il n'y a pas eu de notes, où qu'elles sont toutes non notées*/
     IF(countEleves <> 0) THEN
         /*On calcule la moyenne*/
-        SET moy := moy / countEleves;
+        SET moy := FORMAT(moy / countEleves,2);
     ELSE
         /*En cas de problème, la moyenne vaut -1*/
         SET moy := -1;
